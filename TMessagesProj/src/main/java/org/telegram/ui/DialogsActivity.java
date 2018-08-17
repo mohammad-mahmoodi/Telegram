@@ -42,6 +42,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.telegram.AutoProxy;
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ApplicationLoader;
 import org.telegram.messenger.BuildVars;
@@ -869,7 +870,8 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
                                 dialog.pinned ? R.drawable.chats_unpin : R.drawable.chats_pin,
                                 R.drawable.chats_clear,
                                 hasUnread ? R.drawable.menu_read : R.drawable.menu_unread,
-                                R.drawable.chats_leave
+                                R.drawable.chats_leave ,
+                                AutoProxy.isAutoProxy(selectedDialog) ? R.drawable.proxy_off : R.drawable.proxy_on
                         };
                         if (MessagesController.getInstance(currentAccount).isProxyDialog(dialog.id)) {
                             items = new CharSequence[]{
@@ -882,13 +884,15 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
                                     dialog.pinned || MessagesController.getInstance(currentAccount).canPinDialog(false) ? (dialog.pinned ? LocaleController.getString("UnpinFromTop", R.string.UnpinFromTop) : LocaleController.getString("PinToTop", R.string.PinToTop)) : null,
                                     TextUtils.isEmpty(chat.username) ? LocaleController.getString("ClearHistory", R.string.ClearHistory) : LocaleController.getString("ClearHistoryCache", R.string.ClearHistoryCache),
                                     hasUnread ? LocaleController.getString("MarkAsRead", R.string.MarkAsRead) : LocaleController.getString("MarkAsUnread", R.string.MarkAsUnread),
-                                    LocaleController.getString("LeaveMegaMenu", R.string.LeaveMegaMenu)};
+                                    LocaleController.getString("LeaveMegaMenu", R.string.LeaveMegaMenu)
+                            };
                         } else {
                             items = new CharSequence[]{
                                     dialog.pinned || MessagesController.getInstance(currentAccount).canPinDialog(false) ? (dialog.pinned ? LocaleController.getString("UnpinFromTop", R.string.UnpinFromTop) : LocaleController.getString("PinToTop", R.string.PinToTop)) : null,
                                     LocaleController.getString("ClearHistoryCache", R.string.ClearHistoryCache),
                                     hasUnread ? LocaleController.getString("MarkAsRead", R.string.MarkAsRead) : LocaleController.getString("MarkAsUnread", R.string.MarkAsUnread),
-                                    LocaleController.getString("LeaveChannelMenu", R.string.LeaveChannelMenu)};
+                                    LocaleController.getString("LeaveChannelMenu", R.string.LeaveChannelMenu) ,
+                                    AutoProxy.isAutoProxy(selectedDialog)?LocaleController.getString("RemoveAutoProxy", R.string.RemoveAutoProxy) : LocaleController.getString("AddAutoProxy", R.string.AddAutoProxy)};
                         }
                         builder.setItems(items, icons, new DialogInterface.OnClickListener() {
                             @Override
@@ -905,7 +909,14 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
                                     } else {
                                         MessagesController.getInstance(currentAccount).markDialogAsUnread(selectedDialog, null, 0);
                                     }
-                                } else {
+                                }else if (which == 4) {
+                                    if (AutoProxy.isAutoProxy(selectedDialog)) {
+                                        AutoProxy.removeFromAutoProxy(selectedDialog);
+                                    } else {
+                                        AutoProxy.addToAutoProxy(selectedDialog);
+                                    }
+                                }
+                                else {
                                     AlertDialog.Builder builder = new AlertDialog.Builder(getParentActivity());
                                     builder.setTitle(LocaleController.getString("AppName", R.string.AppName));
                                     if (which == 1) {
