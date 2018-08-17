@@ -160,10 +160,9 @@ public class AutoProxy implements NotificationCenter.NotificationCenterDelegate 
             info = new SharedConfig.ProxyInfo(address, p, "", "", secret);
         }
         editor.commit();
-
-//        SharedConfig.currentProxy = SharedConfig.addProxy(info);
-//
-//        ConnectionsManager.setProxySettings(true, address, p, user, password, secret);
+//        SharedConfig.addProxy(info);
+        SharedConfig.currentProxy = SharedConfig.addProxy(info);
+        ConnectionsManager.setProxySettings(true, address, p, user, password, secret);
         checkProxyList();
         NotificationCenter.getGlobalInstance().postNotificationName(NotificationCenter.proxySettingsChanged);
 
