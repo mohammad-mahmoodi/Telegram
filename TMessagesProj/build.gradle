@@ -57,13 +57,12 @@ android {
     }
 
     signingConfigs {
-//        debug {
-//            storeFile file("config/release.keystore")
-//            storePassword RELEASE_STORE_PASSWORD
-//            keyAlias RELEASE_KEY_ALIAS
-//            keyPassword RELEASE_KEY_PASSWORD
-//        }
-
+        debug {
+            storeFile file('/debug.jks')
+            storePassword '12345678'
+            keyAlias 'key0'
+            keyPassword '12345678'
+        }
         release {
             storeFile file("config/release.keystore")
             storePassword RELEASE_STORE_PASSWORD
@@ -80,8 +79,8 @@ android {
 //            applicationIdSuffix ".beta"
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
         }
-
         release {
             debuggable false
             jniDebuggable false
@@ -90,7 +89,6 @@ android {
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-
         foss {
             debuggable false
             jniDebuggable false

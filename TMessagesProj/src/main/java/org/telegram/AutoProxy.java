@@ -167,13 +167,15 @@ public class AutoProxy implements NotificationCenter.NotificationCenterDelegate 
             editor.putString("proxy_secret", secret);
             info = new SharedConfig.ProxyInfo(address, p, "", "", secret);
         }
-        editor.commit();
+      //  editor.commit();
 
-        SharedConfig.currentProxy = SharedConfig.addProxy(info);
+        SharedConfig.addProxy(info);
 
-        ConnectionsManager.setProxySettings(true, address, p, user, password, secret);
-        checkProxyList();
+//        SharedConfig.currentProxy = SharedConfig.addProxy(info);
+//
+//        ConnectionsManager.setProxySettings(true, address, p, user, password, secret);
         NotificationCenter.getGlobalInstance().postNotificationName(NotificationCenter.proxySettingsChanged);
+        checkProxyList();
 
     }
 
@@ -211,7 +213,7 @@ public class AutoProxy implements NotificationCenter.NotificationCenterDelegate 
         }
     }
 
-    private long lastCheckInConnectionLost;
+    private long delayTimeInConnectionLost = 2000;
 
     private void updateCurrentConnectionState(int account) {
 
@@ -219,7 +221,9 @@ public class AutoProxy implements NotificationCenter.NotificationCenterDelegate 
         currentConnectionState = ConnectionsManager.getInstance(currentAccount).getConnectionState();
         if (currentConnectionState == ConnectionsManager.ConnectionStateWaitingForNetwork) {
 
+            delayTimeInConnectionLost = 2000;
         } else if (currentConnectionState == ConnectionsManager.ConnectionStateUpdating) {
+            delayTimeInConnectionLost = 2000 ;
 
         } else if (currentConnectionState == ConnectionsManager.ConnectionStateConnectingToProxy) {
 
@@ -227,11 +231,12 @@ public class AutoProxy implements NotificationCenter.NotificationCenterDelegate 
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    //Do something after 100ms
+
                     if (currentConnectionState == ConnectionsManager.ConnectionStateConnectingToProxy) {
-                        currentPing = 10000;
                         checkProxyList();
-//                        handler.postDelayed(this,10000);
+                        handler.postDelayed(this,delayTimeInConnectionLost);
+                        if(delayTimeInConnectionLost < 60*1000*2)
+                        delayTimeInConnectionLost = delayTimeInConnectionLost +1000;
                         Log.d("tdroid", "ConnectionStateConnectingToProxy" + " checkProxyList ");
                     }
                 }
@@ -239,6 +244,9 @@ public class AutoProxy implements NotificationCenter.NotificationCenterDelegate 
 
         } else if (currentConnectionState == ConnectionsManager.ConnectionStateConnecting) {
 
+            delayTimeInConnectionLost = 2000;
+        }else if (currentConnectionState == ConnectionsManager.ConnectionStateConnected) {
+            delayTimeInConnectionLost = 2000;
         }
 
     }
@@ -266,15 +274,33 @@ public class AutoProxy implements NotificationCenter.NotificationCenterDelegate 
         currentPing = 100000L;
         for (int a = 0, count = SharedConfig.proxyList.size(); a < count; a++) {
             final SharedConfig.ProxyInfo proxyInfo = SharedConfig.proxyList.get(a);
+
+//            if (proxyInfo.checking && SystemClock.elapsedRealtime() - proxyInfo.availableCheckTime >  10 * 1000) {
+//
+//                if (currentConnectionState!=ConnectionsManager.ConnectionStateWaitingForNetwork  && SharedConfig.proxyList.size() > MIN_PROXY_COUNT) {
+//                    SharedConfig.deleteProxy(proxyInfo);
+//                    count = SharedConfig.proxyList.size();
+//                    NotificationCenter.getGlobalInstance().postNotificationName(NotificationCenter.proxySettingsChanged);
+//                    Log.i("tdroid", "run: delete proxy manual 20s timeout");
+//
+//                }
+//
+//
+//            }
+
+
+
+
             if (proxyInfo.checking || SystemClock.elapsedRealtime() - proxyInfo.availableCheckTime < 2 * 60 * 1000) {
                 if (!proxyInfo.checking && proxyInfo.available) {
                     if (proxyInfo.ping < currentPing) {
                         SharedConfig.currentProxy = proxyInfo;
                         ConnectionsManager.setProxySettings(true, proxyInfo.address, proxyInfo.port, proxyInfo.username, proxyInfo.password, proxyInfo.secret);
+                        NotificationCenter.getGlobalInstance().postNotificationName(NotificationCenter.proxySettingsChanged);
                         currentPing = proxyInfo.ping;
                         Log.d("tdroid", "connect faster proxy");
                     }
-                } else if (!proxyInfo.checking && SharedConfig.proxyList.size() > MIN_PROXY_COUNT) {
+                } else if (!proxyInfo.checking && SharedConfig.proxyList.size() > MIN_PROXY_COUNT && !proxyInfo.available ) {
                     SharedConfig.deleteProxy(proxyInfo);
                     count = SharedConfig.proxyList.size();
                     Log.i("tdroid", "run: delete proxy ");
@@ -312,6 +338,8 @@ public class AutoProxy implements NotificationCenter.NotificationCenterDelegate 
                                 }
                             }
                             NotificationCenter.getGlobalInstance().postNotificationName(NotificationCenter.proxyCheckDone, proxyInfo);
+                            NotificationCenter.getGlobalInstance().postNotificationName(NotificationCenter.proxySettingsChanged);
+
                         }
                     });
                 }
