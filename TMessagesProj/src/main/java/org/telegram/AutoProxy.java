@@ -23,7 +23,6 @@ import org.telegram.messenger.R;
 import org.telegram.messenger.SharedConfig;
 import org.telegram.messenger.UserConfig;
 import org.telegram.messenger.Utilities;
-import org.telegram.messenger.exoplayer2.util.Util;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.RequestTimeDelegate;
 import org.telegram.ui.ActionBar.BaseFragment;
@@ -47,8 +46,8 @@ public class AutoProxy implements NotificationCenter.NotificationCenterDelegate 
     private int currentConnectionState;
 
     public AutoProxy() {
-        NotificationCenter.getInstance(currentAccount).addObserver(this, NotificationCenter.didUpdatedConnectionState);
-        NotificationCenter.getInstance(currentAccount).addObserver(this, NotificationCenter.didReceivedNewMessages);
+        NotificationCenter.getInstance(currentAccount).addObserver(this, NotificationCenter.didUpdateConnectionState);
+        NotificationCenter.getInstance(currentAccount).addObserver(this, NotificationCenter.didReceiveNewMessages);
     }
 
     public void addAutoProxy(String urlProxy) {
@@ -182,7 +181,7 @@ public class AutoProxy implements NotificationCenter.NotificationCenterDelegate 
 
     @Override
     public void didReceivedNotification(int id, int account, Object... args) {
-        if (id == NotificationCenter.didReceivedNewMessages) {
+        if (id == NotificationCenter.didReceiveNewMessages) {
             Log.d("tdroid", "id is " + id);
             Long dialogId = (Long) args[0];
             ArrayList<MessageObject> messageObjects = (ArrayList<MessageObject>) args[1];
@@ -202,7 +201,7 @@ public class AutoProxy implements NotificationCenter.NotificationCenterDelegate 
 
                 }
             }
-        } else if (id == NotificationCenter.didUpdatedConnectionState) {
+        } else if (id == NotificationCenter.didUpdateConnectionState) {
             int state = ConnectionsManager.getInstance(account).getConnectionState();
             updateCurrentConnectionState(account);
             Log.d("tdroid", "didUpdatedConnectionState status is" + state);

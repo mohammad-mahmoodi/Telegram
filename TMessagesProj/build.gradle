@@ -68,10 +68,10 @@ android {
             keyPassword '12345678'
         }
         release {
-            storeFile file("config/release.keystore")
-            storePassword RELEASE_STORE_PASSWORD
-            keyAlias RELEASE_KEY_ALIAS
-            keyPassword RELEASE_KEY_PASSWORD
+            storeFile file('/debug.jks')
+            storePassword '12345678'
+            keyAlias 'key0'
+            keyPassword '12345678'
         }
     }
 
