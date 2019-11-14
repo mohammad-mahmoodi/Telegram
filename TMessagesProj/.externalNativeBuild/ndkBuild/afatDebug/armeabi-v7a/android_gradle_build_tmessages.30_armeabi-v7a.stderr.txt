@@ -1,0 +1,563 @@
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./MediaStreamItf.cpp:8:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/MediaStreamItf.h:14:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/AudioOutput.cpp:19:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/AudioOutputAndroid.h:20:15: warning: 'Start' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Start();
+                     ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../MediaStreamItf.h:24:15: note: overridden virtual function is here
+        virtual void Start()=0;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/AudioOutput.cpp:19:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/AudioOutputAndroid.h:21:15: warning: 'Stop' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Stop();
+                     ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../MediaStreamItf.h:25:15: note: overridden virtual function is here
+        virtual void Stop()=0;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/AudioOutput.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/../../audio/AudioOutput.h:14:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../MediaStreamItf.h:14:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+3 warnings generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./OpusEncoder.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/OpusEncoder.h:11:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/MediaStreamItf.h:14:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./JitterBuffer.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/VoIPController.h:24:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/video/VideoSource.h:12:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/Buffers.h:19:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputOpenSLES.cpp:10:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputOpenSLES.h:13:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/audio/AudioOutput.h:14:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/MediaStreamItf.h:14:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./OpusDecoder.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/OpusDecoder.h:11:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/audio/../MediaStreamItf.h:14:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioInputAndroid.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioInputAndroid.h:11:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/AudioInput.h:13:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/../MediaStreamItf.h:14:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputAndroid.cpp:7:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputAndroid.h:20:15: warning: 'Start' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Start();
+                     ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/../MediaStreamItf.h:24:15: note: overridden virtual function is here
+        virtual void Start()=0;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputAndroid.cpp:7:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputAndroid.h:21:15: warning: 'Stop' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Stop();
+                     ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/../MediaStreamItf.h:25:15: note: overridden virtual function is here
+        virtual void Stop()=0;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputAndroid.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputAndroid.h:11:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/AudioOutput.h:14:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/../MediaStreamItf.h:14:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+3 warnings generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./CongestionControl.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/CongestionControl.h:12:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./PacketReassembler.cpp:5:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/PacketReassembler.h:12:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/Buffers.h:19:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+1 warning generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./EchoCanceller.cpp:12:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/EchoCanceller.h:10:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./MessageThread.cpp:15:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/MessageThread.h:8:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./VoIPServerConfig.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/VoIPServerConfig.h:13:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./NetworkSocket.cpp:14:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/NetworkSocketPosix.h:11:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/Buffers.h:19:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/AudioIO.cpp:19:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/AudioOutputAndroid.h:20:15: warning: 'Start' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Start();
+                     ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../MediaStreamItf.h:24:15: note: overridden virtual function is here
+        virtual void Start()=0;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/AudioIO.cpp:19:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/AudioOutputAndroid.h:21:15: warning: 'Stop' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Stop();
+                     ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../MediaStreamItf.h:25:15: note: overridden virtual function is here
+        virtual void Stop()=0;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/AudioIO.cpp:8:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/AudioIO.h:11:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/../../audio/AudioInput.h:13:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../MediaStreamItf.h:14:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/../../threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+3 warnings generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/VideoSourceAndroid.cpp:5:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/VideoSourceAndroid.h:8:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../video/VideoSource.h:12:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../Buffers.h:19:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/VideoRendererAndroid.cpp:93:16: warning: moving a temporary object prevents copy elision [-Wpessimizing-move]
+                Buffer frame=std::move(queue.GetBlocking());
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/VideoRendererAndroid.cpp:93:16: note: remove std::move call here
+                Buffer frame=std::move(queue.GetBlocking());
+                             ^~~~~~~~~~                   ~
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/VideoRendererAndroid.cpp:5:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/VideoRendererAndroid.h:8:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../video/VideoRenderer.h:9:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../Buffers.h:19:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+2 warnings generated.
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Connection.cpp:222:51: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (currentProtocolType != ProtocolTypeDD && currentPacketLength % 4 != 0 || currentPacketLength > 2 * 1024 * 1024) {
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Connection.cpp:222:51: note: place parentheses around the '&&' expression to silence this warning
+        if (currentProtocolType != ProtocolTypeDD && currentPacketLength % 4 != 0 || currentPacketLength > 2 * 1024 * 1024) {
+                                                  ^
+            (                                                                    )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Connection.cpp:651:57: warning: '&&' within '||' [-Wlogical-op-parentheses]
+    bool switchToNextPort = reason == 2 && wasConnected && (!hasSomeDataSinceLastConnect || currentDatacenter->isCustomPort(currentAddressFlags)) || forceNextPort;
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Connection.cpp:651:57: note: place parentheses around the '&&' expression to silence this warning
+    bool switchToNextPort = reason == 2 && wasConnected && (!hasSomeDataSinceLastConnect || currentDatacenter->isCustomPort(currentAddressFlags)) || forceNextPort;
+                                                        ^
+                            (                                                                                                                    )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Connection.cpp:701:62: warning: '&&' within '||' [-Wlogical-op-parentheses]
+            if (connectionType == ConnectionTypeGenericMedia && currentDatacenter->isHandshaking(true) || connectionType == ConnectionTypeGeneric && (currentDatacenter->isHandshaking(false) || datacenterId == ConnectionsManager::getInstance(currentDatacenter->instanceNum).currentDatacenterId || datacenterId == ConnectionsManager::getInstance(currentDatacenter->instanceNum).movingToDatacenterId)) {
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Connection.cpp:701:62: note: place parentheses around the '&&' expression to silence this warning
+            if (connectionType == ConnectionTypeGenericMedia && currentDatacenter->isHandshaking(true) || connectionType == ConnectionTypeGeneric && (currentDatacenter->isHandshaking(false) || datacenterId == ConnectionsManager::getInstance(currentDatacenter->instanceNum).currentDatacenterId || datacenterId == ConnectionsManager::getInstance(currentDatacenter->instanceNum).movingToDatacenterId)) {
+                                                             ^
+                (                                                                                     )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Connection.cpp:701:147: warning: '&&' within '||' [-Wlogical-op-parentheses]
+            if (connectionType == ConnectionTypeGenericMedia && currentDatacenter->isHandshaking(true) || connectionType == ConnectionTypeGeneric && (currentDatacenter->isHandshaking(false) || datacenterId == ConnectionsManager::getInstance(currentDatacenter->instanceNum).currentDatacenterId || datacenterId == ConnectionsManager::getInstance(currentDatacenter->instanceNum).movingToDatacenterId)) {
+                                                                                                       ~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Connection.cpp:701:147: note: place parentheses around the '&&' expression to silence this warning
+            if (connectionType == ConnectionTypeGenericMedia && currentDatacenter->isHandshaking(true) || connectionType == ConnectionTypeGeneric && (currentDatacenter->isHandshaking(false) || datacenterId == ConnectionsManager::getInstance(currentDatacenter->instanceNum).currentDatacenterId || datacenterId == ConnectionsManager::getInstance(currentDatacenter->instanceNum).movingToDatacenterId)) {
+                                                                                                                                                  ^
+                                                                                                          (                                                                                                                                                                                                                                                                                                  )
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionSession.cpp:12:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/MTProtoScheme.h:35:15: warning: 'TL_api_request::deserializeResponse' hides overloaded virtual function [-Woverloaded-virtual]
+    TLObject *deserializeResponse(NativeByteBuffer *stream, uint32_t bytes, bool &error);
+              ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/TLObject.h:23:23: note: hidden overloaded virtual function 'TLObject::deserializeResponse' declared here: different number of parameters (4 vs 3)
+    virtual TLObject *deserializeResponse(NativeByteBuffer *stream, uint32_t constructor, int32_t instanceNum, bool &error);
+                      ^
+4 warnings generated.
+1 warning generated.
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionSocket.cpp:416:29: warning: '&&' within '||' [-Wlogical-op-parentheses]
+    if (proxyAuthState == 0 && (outgoingByteStream->hasData() || !onConnectedSent) || proxyAuthState == 1 || proxyAuthState == 3 || proxyAuthState == 5) {
+        ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionSocket.cpp:416:29: note: place parentheses around the '&&' expression to silence this warning
+    if (proxyAuthState == 0 && (outgoingByteStream->hasData() || !onConnectedSent) || proxyAuthState == 1 || proxyAuthState == 3 || proxyAuthState == 5) {
+                            ^
+        (                                                                         )
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:20:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/MTProtoScheme.h:35:15: warning: 'TL_api_request::deserializeResponse' hides overloaded virtual function [-Woverloaded-virtual]
+    TLObject *deserializeResponse(NativeByteBuffer *stream, uint32_t bytes, bool &error);
+              ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/TLObject.h:23:23: note: hidden overloaded virtual function 'TLObject::deserializeResponse' declared here: different number of parameters (4 vs 3)
+    virtual TLObject *deserializeResponse(NativeByteBuffer *stream, uint32_t constructor, int32_t instanceNum, bool &error);
+                      ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:23:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/MTProtoScheme.h:35:15: warning: 'TL_api_request::deserializeResponse' hides overloaded virtual function [-Woverloaded-virtual]
+    TLObject *deserializeResponse(NativeByteBuffer *stream, uint32_t bytes, bool &error);
+              ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/TLObject.h:23:23: note: hidden overloaded virtual function 'TLObject::deserializeResponse' declared here: different number of parameters (4 vs 3)
+    virtual TLObject *deserializeResponse(NativeByteBuffer *stream, uint32_t constructor, int32_t instanceNum, bool &error);
+                      ^
+1 warning generated.
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:844:64: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (handshake->getType() == HandshakeTypePerm || media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                      ~~ ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:844:64: note: place parentheses around the '&&' expression to silence this warning
+        if (handshake->getType() == HandshakeTypePerm || media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                               ^
+                                                         (                                                      )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:844:124: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (handshake->getType() == HandshakeTypePerm || media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                                                                 ~~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:844:124: note: place parentheses around the '&&' expression to silence this warning
+        if (handshake->getType() == HandshakeTypePerm || media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                                                                           ^
+                                                                                                                    (                                                       )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:902:19: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+            ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:902:19: note: place parentheses around the '&&' expression to silence this warning
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                  ^
+            (                                                      )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:902:79: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                    ~~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:902:79: note: place parentheses around the '&&' expression to silence this warning
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                              ^
+                                                                       (                                                       )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:915:19: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+            ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:915:19: note: place parentheses around the '&&' expression to silence this warning
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                  ^
+            (                                                      )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:915:79: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                    ~~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:915:79: note: place parentheses around the '&&' expression to silence this warning
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                              ^
+                                                                       (                                                       )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:946:19: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+            ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:946:19: note: place parentheses around the '&&' expression to silence this warning
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                  ^
+            (                                                      )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:946:79: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                    ~~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:946:79: note: place parentheses around the '&&' expression to silence this warning
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                              ^
+                                                                       (                                                       )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:958:19: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+            ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:958:19: note: place parentheses around the '&&' expression to silence this warning
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                  ^
+            (                                                      )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:958:79: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                    ~~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:958:79: note: place parentheses around the '&&' expression to silence this warning
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                              ^
+                                                                       (                                                       )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:1029:23: warning: '&&' within '||' [-Wlogical-op-parentheses]
+            if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() == HandshakeTypeTemp) {
+                ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:1029:23: note: place parentheses around the '&&' expression to silence this warning
+            if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() == HandshakeTypeTemp) {
+                      ^
+                (                                                      )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:1029:83: warning: '&&' within '||' [-Wlogical-op-parentheses]
+            if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() == HandshakeTypeTemp) {
+                                                                        ~~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:1029:83: note: place parentheses around the '&&' expression to silence this warning
+            if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() == HandshakeTypeTemp) {
+                                                                                  ^
+                                                                           (                                                  )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:850:68: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (length < 24 + 32 || !connection->allowsCustomPadding() && (length - 24) % 16 != 0 || !datacenter->decryptServerResponse(keyId, data->bytes() + mark + 8, data->bytes() + mark + 24, length - 24, connection)) {
+                             ~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:850:68: note: place parentheses around the '&&' expression to silence this warning
+        if (length < 24 + 32 || !connection->allowsCustomPadding() && (length - 24) % 16 != 0 || !datacenter->decryptServerResponse(keyId, data->bytes() + mark + 8, data->bytes() + mark + 24, length - 24, connection)) {
+                                                                   ^
+                                (                                                            )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:935:40: warning: '&&' within '||' [-Wlogical-op-parentheses]
+            if (connectionType == type && connectionNum == num || request->connectionToken == token) {
+                ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~ ~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:935:40: note: place parentheses around the '&&' expression to silence this warning
+            if (connectionType == type && connectionNum == num || request->connectionToken == token) {
+                                       ^
+                (                                             )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1739:101: warning: expression with side effects will be evaluated despite being used as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+        if (LOGS_ENABLED) DEBUG_D("send request wrapped %p - %s", request->rpcRequest.get(), typeid(*(request->rpcRequest.get())).name());
+                                                                                                    ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1831:24: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (token != 0 && request->requestToken == token || messageId != 0 && request->respondsToMessageId(messageId)) {
+            ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1831:24: note: place parentheses around the '&&' expression to silence this warning
+        if (token != 0 && request->requestToken == token || messageId != 0 && request->respondsToMessageId(messageId)) {
+                       ^
+            (                                           )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1831:76: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (token != 0 && request->requestToken == token || messageId != 0 && request->respondsToMessageId(messageId)) {
+                                                         ~~ ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1831:76: note: place parentheses around the '&&' expression to silence this warning
+        if (token != 0 && request->requestToken == token || messageId != 0 && request->respondsToMessageId(messageId)) {
+                                                                           ^
+                                                            (                                                        )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1844:24: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (token != 0 && request->requestToken == token || messageId != 0 && request->respondsToMessageId(messageId)) {
+            ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1844:24: note: place parentheses around the '&&' expression to silence this warning
+        if (token != 0 && request->requestToken == token || messageId != 0 && request->respondsToMessageId(messageId)) {
+                       ^
+            (                                           )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1844:76: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (token != 0 && request->requestToken == token || messageId != 0 && request->respondsToMessageId(messageId)) {
+                                                         ~~ ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1844:76: note: place parentheses around the '&&' expression to silence this warning
+        if (token != 0 && request->requestToken == token || messageId != 0 && request->respondsToMessageId(messageId)) {
+                                                                           ^
+                                                            (                                                        )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1981:101: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (type == HandshakeTypePerm || type == HandshakeTypeAll || type == HandshakeTypeMediaTemp && request->isMediaRequest() || type == HandshakeTypeTemp && !request->isMediaRequest()) {
+                                                                  ~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1981:101: note: place parentheses around the '&&' expression to silence this warning
+        if (type == HandshakeTypePerm || type == HandshakeTypeAll || type == HandshakeTypeMediaTemp && request->isMediaRequest() || type == HandshakeTypeTemp && !request->isMediaRequest()) {
+                                                                                                    ^
+                                                                     (                                                          )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1981:159: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (type == HandshakeTypePerm || type == HandshakeTypeAll || type == HandshakeTypeMediaTemp && request->isMediaRequest() || type == HandshakeTypeTemp && !request->isMediaRequest()) {
+                                                                                                                                 ~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1981:159: note: place parentheses around the '&&' expression to silence this warning
+        if (type == HandshakeTypePerm || type == HandshakeTypeAll || type == HandshakeTypeMediaTemp && request->isMediaRequest() || type == HandshakeTypeTemp && !request->isMediaRequest()) {
+                                                                                                                                                              ^
+                                                                                                                                    (                                                      )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2548:125: warning: expression with side effects will be evaluated despite being used as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+                            if (LOGS_ENABLED) DEBUG_D("wrap body(%p, %s) to TL_invokeAfterMsg", message->body.get(), typeid(*(message->body.get())).name());
+                                                                                                                            ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2706:25: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (!workaround && !updatingDcSettings || workaround && !updatingDcSettingsWorkaround) {
+            ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~ ~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2706:25: note: place parentheses around the '&&' expression to silence this warning
+        if (!workaround && !updatingDcSettings || workaround && !updatingDcSettingsWorkaround) {
+                        ^
+            (                                 )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2706:62: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (!workaround && !updatingDcSettings || workaround && !updatingDcSettingsWorkaround) {
+                                               ~~ ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2706:62: note: place parentheses around the '&&' expression to silence this warning
+        if (!workaround && !updatingDcSettings || workaround && !updatingDcSettingsWorkaround) {
+                                                             ^
+                                                  (                                          )
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/MTProtoScheme.cpp:11:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/MTProtoScheme.h:35:15: warning: 'TL_api_request::deserializeResponse' hides overloaded virtual function [-Woverloaded-virtual]
+    TLObject *deserializeResponse(NativeByteBuffer *stream, uint32_t bytes, bool &error);
+              ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/TLObject.h:23:23: note: hidden overloaded virtual function 'TLObject::deserializeResponse' declared here: different number of parameters (4 vs 3)
+    virtual TLObject *deserializeResponse(NativeByteBuffer *stream, uint32_t constructor, int32_t instanceNum, bool &error);
+                      ^
+13 warnings generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Request.cpp:12:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/MTProtoScheme.h:35:15: warning: 'TL_api_request::deserializeResponse' hides overloaded virtual function [-Woverloaded-virtual]
+    TLObject *deserializeResponse(NativeByteBuffer *stream, uint32_t bytes, bool &error);
+              ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/TLObject.h:23:23: note: hidden overloaded virtual function 'TLObject::deserializeResponse' declared here: different number of parameters (4 vs 3)
+    virtual TLObject *deserializeResponse(NativeByteBuffer *stream, uint32_t constructor, int32_t instanceNum, bool &error);
+                      ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Request.cpp:86:19: warning: '&&' within '||' [-Wlogical-op-parentheses]
+    return !media && datacenter->lastInitVersion != currentVersion || media && datacenter->lastInitMediaVersion != currentVersion;
+           ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Request.cpp:86:19: note: place parentheses around the '&&' expression to silence this warning
+    return !media && datacenter->lastInitVersion != currentVersion || media && datacenter->lastInitMediaVersion != currentVersion;
+                  ^
+           (                                                      )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Request.cpp:86:77: warning: '&&' within '||' [-Wlogical-op-parentheses]
+    return !media && datacenter->lastInitVersion != currentVersion || media && datacenter->lastInitMediaVersion != currentVersion;
+                                                                   ~~ ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Request.cpp:86:77: note: place parentheses around the '&&' expression to silence this warning
+    return !media && datacenter->lastInitVersion != currentVersion || media && datacenter->lastInitMediaVersion != currentVersion;
+                                                                            ^
+                                                                      (                                                          )
+1 warning generated.
+3 warnings generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Handshake.cpp:21:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/MTProtoScheme.h:35:15: warning: 'TL_api_request::deserializeResponse' hides overloaded virtual function [-Woverloaded-virtual]
+    TLObject *deserializeResponse(NativeByteBuffer *stream, uint32_t bytes, bool &error);
+              ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/TLObject.h:23:23: note: hidden overloaded virtual function 'TLObject::deserializeResponse' declared here: different number of parameters (4 vs 3)
+    virtual TLObject *deserializeResponse(NativeByteBuffer *stream, uint32_t constructor, int32_t instanceNum, bool &error);
+                      ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./logging.cpp:12:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/VoIPController.h:24:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/video/VideoSource.h:12:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/Buffers.h:19:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./Buffers.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/Buffers.h:19:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./VoIPGroupController.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/VoIPController.h:24:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/video/VideoSource.h:12:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/Buffers.h:19:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./VoIPController.cpp:1257:69: warning: format specifies type 'unsigned long' but the argument has type 'size_t' (aka 'unsigned int') [-Wformat]
+                                LOGV("Writing extra into header: type %u, length %lu", x->type, x->data.Length());
+                                                                                 ~~~            ^~~~~~~~~~~~~~~~
+                                                                                 %zu
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/logging.h:28:76: note: expanded from macro 'LOGV'
+#define LOGV(...) {__android_log_print(ANDROID_LOG_VERBOSE, TAG, _LOG_WRAP(__VA_ARGS__)); tgvoip_log_file_printf('V', __VA_ARGS__);}
+                                                                           ^~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/logging.h:26:24: note: expanded from macro '_LOG_WRAP'
+#define _LOG_WRAP(...) __VA_ARGS__
+                       ^~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./VoIPController.cpp:1336:71: warning: format specifies type 'unsigned long' but the argument has type 'size_t' (aka 'unsigned int') [-Wformat]
+                                                LOGV("Writing extra into header: type %u, length %lu", x->type, x->data.Length());
+                                                                                                 ~~~            ^~~~~~~~~~~~~~~~
+                                                                                                 %zu
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/logging.h:28:76: note: expanded from macro 'LOGV'
+#define LOGV(...) {__android_log_print(ANDROID_LOG_VERBOSE, TAG, _LOG_WRAP(__VA_ARGS__)); tgvoip_log_file_printf('V', __VA_ARGS__);}
+                                                                           ^~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/logging.h:26:24: note: expanded from macro '_LOG_WRAP'
+#define _LOG_WRAP(...) __VA_ARGS__
+                       ^~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./VoIPController.cpp:2031:65: warning: format specifies type 'unsigned long' but the argument has type 'size_t' (aka 'unsigned int') [-Wformat]
+                                LOGV("Peer acknowledged extra type %u length %lu", x->type, x->data.Length());
+                                                                             ~~~            ^~~~~~~~~~~~~~~~
+                                                                             %zu
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/logging.h:28:76: note: expanded from macro 'LOGV'
+#define LOGV(...) {__android_log_print(ANDROID_LOG_VERBOSE, TAG, _LOG_WRAP(__VA_ARGS__)); tgvoip_log_file_printf('V', __VA_ARGS__);}
+                                                                           ^~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/logging.h:26:24: note: expanded from macro '_LOG_WRAP'
+#define _LOG_WRAP(...) __VA_ARGS__
+                       ^~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./VoIPController.cpp:3055:49: warning: format specifies type 'unsigned long' but the argument has type 'size_t' (aka 'unsigned int') [-Wformat]
+        LOGV("Sending extra type %u length %lu", type, data.Length());
+                                           ~~~         ^~~~~~~~~~~~~
+                                           %zu
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/logging.h:28:76: note: expanded from macro 'LOGV'
+#define LOGV(...) {__android_log_print(ANDROID_LOG_VERBOSE, TAG, _LOG_WRAP(__VA_ARGS__)); tgvoip_log_file_printf('V', __VA_ARGS__);}
+                                                                           ^~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/logging.h:26:24: note: expanded from macro '_LOG_WRAP'
+#define _LOG_WRAP(...) __VA_ARGS__
+                       ^~~~~~~~~~~
+13 warnings generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./BlockingQueue.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/BlockingQueue.h:12:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./VoIPController.cpp:14:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/VoIPController.h:24:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/video/VideoSource.h:12:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/android/../../Buffers.h:19:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/android/../../threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/AudioInput.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/../../audio/AudioInput.h:13:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../MediaStreamItf.h:14:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/../../threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+1 warning generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioInputOpenSLES.cpp:11:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioInputOpenSLES.h:13:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/AudioInput.h:13:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/../MediaStreamItf.h:14:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/VideoRenderer.cpp:5:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/../os/android/../../video/VideoRenderer.h:9:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/../Buffers.h:19:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/NetworkSocketPosix.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/NetworkSocketPosix.h:11:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/Buffers.h:19:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/VideoSource.cpp:5:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/../os/android/../../video/VideoSource.h:12:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/../os/android/../../Buffers.h:19:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+1 warning generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./client/android/tg_voip_jni.cpp:17:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./client/android/../../os/android/AudioOutputAndroid.h:20:15: warning: 'Start' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Start();
+                     ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/MediaStreamItf.h:24:15: note: overridden virtual function is here
+        virtual void Start()=0;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./client/android/tg_voip_jni.cpp:17:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./client/android/../../os/android/AudioOutputAndroid.h:21:15: warning: 'Stop' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Stop();
+                     ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/MediaStreamItf.h:25:15: note: overridden virtual function is here
+        virtual void Stop()=0;
+                     ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./client/android/tg_voip_jni.cpp:519:10: warning: unused variable 'bufsize' [-Wunused-variable]
+                size_t bufsize=(size_t)env->GetDirectBufferCapacity(buffer);
+                       ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./client/android/tg_voip_jni.cpp:12:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./client/android/../../VoIPServerConfig.h:13:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./client/android/../../os/android/../../threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+4 warnings generated.
+5 warnings generated.
