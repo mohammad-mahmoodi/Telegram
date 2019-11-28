@@ -276,7 +276,6 @@
         <service android:name=".BringAppForegroundService" android:enabled="true"/>
         <service android:name=".NotificationsService" android:enabled="true"/>
         <service android:name=".NotificationRepeat" android:exported="false"/>
-        <service android:name=".ClearCacheService" android:exported="false"/>
         <service android:name=".VideoEncodingService" android:enabled="true"/>
         <service android:name=".LocationSharingService" android:enabled="true"/>
         <service android:name=".voip.VoIPService" android:enabled="true"/>
