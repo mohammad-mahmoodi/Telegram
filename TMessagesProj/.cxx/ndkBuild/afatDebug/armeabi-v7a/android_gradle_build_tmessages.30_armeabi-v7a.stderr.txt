@@ -1,0 +1,20 @@
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./libyuv/source/compare.cc:14:
+In file included from D:/android/sdk/sdk/ndk-bundle/build//../sources/android/support/include\math.h:32:
+D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1302:93: error: no member named 'log2f' in the global namespace
+inline _LIBCPP_INLINE_VISIBILITY float       log2(float __lcpp_x) _NOEXCEPT       {return ::log2f(__lcpp_x);}
+                                                                                          ~~^
+D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1303:93: error: no member named 'log2l' in the global namespace
+inline _LIBCPP_INLINE_VISIBILITY long double log2(long double __lcpp_x) _NOEXCEPT {return ::log2l(__lcpp_x);}
+                                                                                          ~~^
+D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1308:38: error: call to 'log2' is ambiguous
+log2(_A1 __lcpp_x) _NOEXCEPT {return ::log2((double)__lcpp_x);}
+                                     ^~~~~~
+D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1302:46: note: candidate function
+inline _LIBCPP_INLINE_VISIBILITY float       log2(float __lcpp_x) _NOEXCEPT       {return ::log2f(__lcpp_x);}
+                                             ^
+D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1303:46: note: candidate function
+inline _LIBCPP_INLINE_VISIBILITY long double log2(long double __lcpp_x) _NOEXCEPT {return ::log2l(__lcpp_x);}
+                                             ^
+3 errors generated.
+make: *** [D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/build/intermediates/ndkBuild/afatDebug/obj/local/armeabi-v7a/objs-debug/tmessages.30/./libyuv/source/compare.o] Error 1
+make: *** Waiting for unfinished jobs....

@@ -1,0 +1,76 @@
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./fast-edge.cpp:30:
+In file included from D:/android/sdk/sdk/ndk-bundle/build//../sources/android/support/include\math.h:32:
+D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1302:93: error: no member named 'log2f' in the global namespace
+inline _LIBCPP_INLINE_VISIBILITY float       log2(float __lcpp_x) _NOEXCEPT       {return ::log2f(__lcpp_x);}
+                                                                                          ~~^
+D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1303:93: error: no member named 'log2l' in the global namespace
+inline _LIBCPP_INLINE_VISIBILITY long double log2(long double __lcpp_x) _NOEXCEPT {return ::log2l(__lcpp_x);}
+                                                                                          ~~^
+D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1308:38: error: call to 'log2' is ambiguous
+log2(_A1 __lcpp_x) _NOEXCEPT {return ::log2((double)__lcpp_x);}
+                                     ^~~~~~
+D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1302:46: note: candidate function
+inline _LIBCPP_INLINE_VISIBILITY float       log2(float __lcpp_x) _NOEXCEPT       {return ::log2f(__lcpp_x);}
+                                             ^
+D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1303:46: note: candidate function
+inline _LIBCPP_INLINE_VISIBILITY long double log2(long double __lcpp_x) _NOEXCEPT {return ::log2l(__lcpp_x);}
+                                             ^
+3 errors generated.
+make: *** [D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/build/intermediates/ndkBuild/afatRelease/obj/local/armeabi-v7a/objs/tmessages.30/./fast-edge.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./secureid_ocr.cpp:9:
+In file included from D:/android/sdk/sdk/ndk-bundle/build//../sources/android/support/include\math.h:32:
+D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1302:93: error: no member named 'log2f' in the global namespace
+inline _LIBCPP_INLINE_VISIBILITY float       log2(float __lcpp_x) _NOEXCEPT       {return ::log2f(__lcpp_x);}
+                                                                                          ~~^
+D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1303:93: error: no member named 'log2l' in the global namespace
+inline _LIBCPP_INLINE_VISIBILITY long double log2(long double __lcpp_x) _NOEXCEPT {return ::log2l(__lcpp_x);}
+                                                                                          ~~^
+D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1308:38: error: call to 'log2' is ambiguous
+log2(_A1 __lcpp_x) _NOEXCEPT {return ::log2((double)__lcpp_x);}
+                                     ^~~~~~
+D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1302:46: note: candidate function
+inline _LIBCPP_INLINE_VISIBILITY float       log2(float __lcpp_x) _NOEXCEPT       {return ::log2f(__lcpp_x);}
+                                             ^
+D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1303:46: note: candidate function
+inline _LIBCPP_INLINE_VISIBILITY long double log2(long double __lcpp_x) _NOEXCEPT {return ::log2l(__lcpp_x);}
+                                             ^
+3 errors generated.
+make: *** [D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/build/intermediates/ndkBuild/afatRelease/obj/local/armeabi-v7a/objs/tmessages.30/./secureid_ocr.o] Error 1
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./lottie.cpp:4:
+./jni/rlottie/inc\rlottie.h:276:83: error: reference to type 'const std::string' (aka 'const basic_string<char, char_traits<char>, allocator<char> >') could not bind to an lvalue of type 'const char [1]'
+    loadFromData(std::string jsonData, const std::string &key, const std::string &resourcePath="");
+                                                                                  ^            ~~
+./jni/rlottie/inc\rlottie.h:276:83: note: passing argument to parameter 'resourcePath' here
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./lottie.cpp:105:78: error: too few arguments to function call, expected 3, have 2
+    info->animation = rlottie::Animation::loadFromData(jsonString, nameString);
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                       ^
+./jni/rlottie/inc\rlottie.h:275:5: note: 'loadFromData' declared here
+    static std::unique_ptr<Animation>
+    ^
+2 errors generated.
+make: *** [D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/build/intermediates/ndkBuild/afatRelease/obj/local/armeabi-v7a/objs/tmessages.30/./lottie.o] Error 1
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./gifvideo.cpp:15:
+In file included from ./jni/ffmpeg/include\libavformat/avformat.h:319:
+In file included from ./jni/ffmpeg/include\libavcodec/avcodec.h:31:
+In file included from ./jni/ffmpeg/include\libavutil/samplefmt.h:24:
+In file included from ./jni/ffmpeg/include\libavutil/avutil.h:296:
+In file included from ./jni/ffmpeg/include\libavutil/common.h:36:
+In file included from D:/android/sdk/sdk/ndk-bundle/build//../sources/android/support/include\math.h:32:
+D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1302:93: error: no member named 'log2f' in the global namespace
+inline _LIBCPP_INLINE_VISIBILITY float       log2(float __lcpp_x) _NOEXCEPT       {return ::log2f(__lcpp_x);}
+                                                                                          ~~^
+D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1303:93: error: no member named 'log2l' in the global namespace
+inline _LIBCPP_INLINE_VISIBILITY long double log2(long double __lcpp_x) _NOEXCEPT {return ::log2l(__lcpp_x);}
+                                                                                          ~~^
+D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1308:38: error: call to 'log2' is ambiguous
+log2(_A1 __lcpp_x) _NOEXCEPT {return ::log2((double)__lcpp_x);}
+                                     ^~~~~~
+D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1302:46: note: candidate function
+inline _LIBCPP_INLINE_VISIBILITY float       log2(float __lcpp_x) _NOEXCEPT       {return ::log2f(__lcpp_x);}
+                                             ^
+D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1303:46: note: candidate function
+inline _LIBCPP_INLINE_VISIBILITY long double log2(long double __lcpp_x) _NOEXCEPT {return ::log2l(__lcpp_x);}
+                                             ^
+3 errors generated.
+make: *** [D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/build/intermediates/ndkBuild/afatRelease/obj/local/armeabi-v7a/objs/tmessages.30/./gifvideo.o] Error 1
