@@ -16,6 +16,7 @@
 #include "utils.h"
 
 #include <stdint.h>
+#include <atomic>
 
 struct OpusEncoder;
 
@@ -35,11 +36,14 @@ public:
 	uint32_t GetBitrate();
 	void SetDTX(bool enable);
 	void SetLevelMeter(AudioLevelMeter* levelMeter);
-	void SetCallback(void (*f)(unsigned char*, size_t, unsigned char*, size_t, void*), void* param);
+	void SetCallback(std::function <void(unsigned char*, size_t, unsigned char*, size_t)> callback);
 	void SetSecondaryEncoderEnabled(bool enabled);
 	void SetVadMode(bool vad);
 	void AddAudioEffect(effects::AudioEffect* effect);
 	void RemoveAudioEffect(effects::AudioEffect* effect);
+	int GetComplexity(){
+		return complexity;
+	}
 
 private:
 	static size_t Callback(unsigned char* data, size_t len, void* param);
@@ -50,28 +54,28 @@ private:
 	::OpusEncoder* enc;
 	::OpusEncoder* secondaryEncoder;
 	unsigned char buffer[4096];
-	uint32_t requestedBitrate;
+	std::atomic<uint32_t> requestedBitrate;
 	uint32_t currentBitrate;
 	Thread* thread;
-	BlockingQueue<unsigned char*> queue;
-	BufferPool bufferPool;
+	BlockingQueue<Buffer> queue;
+	BufferPool<960*2, 10> bufferPool;
 	EchoCanceller* echoCanceller;
-	int complexity;
-	bool running;
+	std::atomic<int> complexity;
+	std::atomic<bool> running;
 	uint32_t frameDuration;
 	int packetLossPercent;
-	uint32_t mediumCorrectionBitrate;
-	uint32_t strongCorrectionBitrate;
-	double mediumCorrectionMultiplier;
-	double strongCorrectionMultiplier;
 	AudioLevelMeter* levelMeter;
 	bool secondaryEncoderEnabled;
 	bool vadMode=false;
 	uint32_t vadNoVoiceBitrate;
 	std::vector<effects::AudioEffect*> postProcEffects;
+	int secondaryEnabledBandwidth;
+	int vadModeVoiceBandwidth;
+	int vadModeNoVoiceBandwidth;
 
-	void (*callback)(unsigned char*, size_t, unsigned char*, size_t, void*);
-	void* callbackParam;
+	bool wasSecondaryEncoderEnabled=false;
+
+	std::function <void(unsigned char*, size_t, unsigned char*, size_t)> callback;
 };
 }
 

@@ -26,7 +26,7 @@
 #define IS_MOBILE_NETWORK(x) (x==NET_TYPE_GPRS || x==NET_TYPE_EDGE || x==NET_TYPE_3G || x==NET_TYPE_HSPA || x==NET_TYPE_LTE || x==NET_TYPE_OTHER_MOBILE)
 
 #define PROTOCOL_NAME 0x50567247 // "GrVP" in little endian (reversed here)
-#define PROTOCOL_VERSION 8
+#define PROTOCOL_VERSION 9
 #define MIN_PROTOCOL_VERSION 3
 
 #define STREAM_DATA_FLAG_LEN16 0x40
@@ -41,6 +41,7 @@
 #define STREAM_TYPE_VIDEO 2
 
 #define FOURCC(a,b,c,d) ((uint32_t)d | ((uint32_t)c << 8) | ((uint32_t)b << 16) | ((uint32_t)a << 24))
+#define PRINT_FOURCC(x) (char)(x >> 24), (char)(x >> 16), (char)(x >> 8), (char)x
 
 #define CODEC_OPUS_OLD 1
 #define CODEC_OPUS FOURCC('O','P','U','S')
@@ -64,6 +65,7 @@
 #define PFLAG_HAS_SENDER_TAG_HASH 64
 
 #define XPFLAG_HAS_EXTRA 1
+#define XPFLAG_HAS_RECV_TS 2
 
 #define EXTRA_TYPE_STREAM_FLAGS 1
 #define EXTRA_TYPE_STREAM_CSD 2
@@ -76,6 +78,7 @@
 #define STREAM_FLAG_ENABLED 1
 #define STREAM_FLAG_DTX 2
 #define STREAM_FLAG_EXTRA_EC 4
+#define STREAM_FLAG_PAUSED 8
 
 #define STREAM_RFLAG_SUPPORTED 1
 
@@ -105,9 +108,6 @@
 
 #define MAX_RECENT_PACKETS 128
 
-#define MAX(a,b) (a>b ? a : b)
-#define MIN(a,b) (a<b ? a : b)
-
 #define SHA1_LENGTH 20
 #define SHA256_LENGTH 32
 
@@ -129,5 +129,14 @@ inline bool seqgt(uint32_t s1, uint32_t s2){
 #define NEED_RATE_FLAG_RECONNECTING 8
 
 #define VIDEO_FRAME_FLAG_KEYFRAME 1
+
+#define VIDEO_ROTATION_MASK 3
+#define VIDEO_ROTATION_0 0
+#define VIDEO_ROTATION_90 1
+#define VIDEO_ROTATION_180 2
+#define VIDEO_ROTATION_270 3
+
+#define FEC_SCHEME_XOR 1
+#define FEC_SCHEME_CM256 2
 
 #endif //TGVOIP_PRIVATEDEFINES_H

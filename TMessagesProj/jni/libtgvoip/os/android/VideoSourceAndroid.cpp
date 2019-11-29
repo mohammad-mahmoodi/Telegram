@@ -21,6 +21,7 @@ VideoSourceAndroid::VideoSourceAndroid(jobject jobj) : javaObject(jobj){
 		stopMethod=env->GetMethodID(cls, "stop", "()V");
 		prepareEncoderMethod=env->GetMethodID(cls, "prepareEncoder", "(Ljava/lang/String;I)V");
 		requestKeyFrameMethod=env->GetMethodID(cls, "requestKeyFrame", "()V");
+		setBitrateMethod=env->GetMethodID(cls, "setBitrate", "(I)V");
 	});
 }
 
@@ -43,7 +44,7 @@ void VideoSourceAndroid::Stop(){
 }
 
 void VideoSourceAndroid::SendFrame(Buffer frame, uint32_t flags){
-	callback(frame, flags);
+	callback(frame, flags, rotation);
 }
 
 void VideoSourceAndroid::SetStreamParameters(std::vector<Buffer> csd, unsigned int width, unsigned int height){
@@ -78,4 +79,14 @@ void VideoSourceAndroid::RequestKeyFrame(){
 	jni::DoWithJNI([this](JNIEnv* env){
 		env->CallVoidMethod(javaObject, requestKeyFrameMethod);
 	});
+}
+
+void VideoSourceAndroid::SetBitrate(uint32_t bitrate){
+	jni::DoWithJNI([&](JNIEnv* env){
+		env->CallVoidMethod(javaObject, setBitrateMethod, (jint)bitrate);
+	});
+}
+
+void VideoSourceAndroid::SetStreamPaused(bool paused){
+	streamStateCallback(paused);
 }

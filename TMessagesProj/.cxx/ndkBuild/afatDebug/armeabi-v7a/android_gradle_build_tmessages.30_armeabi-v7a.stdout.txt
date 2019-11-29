@@ -1,11 +1,3 @@
 Android NDK: WARNING:D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/Android.mk:flac: LOCAL_LDLIBS is always ignored for static libraries    
 Android NDK: WARNING: Unsupported source file extensions in D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/Android.mk for module flac    
 Android NDK:   ./exoplayer/libFLAC/windows_unicode_filenames    
-[armeabi-v7a] Compile++ arm  : tmessages.30 <= compare.cc
-[armeabi-v7a] Compile++ arm  : tmessages.30 <= rotate_argb.cc
-[armeabi-v7a] Compile++ arm  : tmessages.30 <= rotate_common.cc
-[armeabi-v7a] Compile++ arm  : tmessages.30 <= rotate_gcc.cc
-[armeabi-v7a] Compile++ arm  : tmessages.30 <= rotate_mips.cc
-[armeabi-v7a] Compile++ arm  : tmessages.30 <= rotate_neon64.cc
-[armeabi-v7a] Compile++ arm  : tmessages.30 <= rotate_win.cc
-[armeabi-v7a] Compile++ arm  : tmessages.30 <= rotate.cc

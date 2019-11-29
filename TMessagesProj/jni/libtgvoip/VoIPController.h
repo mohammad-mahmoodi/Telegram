@@ -24,6 +24,7 @@
 #include "video/VideoSource.h"
 #include "video/VideoRenderer.h"
 #include <atomic>
+#include "video/ScreamCongestionController.h"
 #include "audio/AudioInput.h"
 #include "BlockingQueue.h"
 #include "audio/AudioOutput.h"
@@ -39,7 +40,7 @@
 #include "MessageThread.h"
 #include "utils.h"
 
-#define LIBTGVOIP_VERSION "2.4.3"
+#define LIBTGVOIP_VERSION "2.5"
 
 #ifdef _WIN32
 #undef GetCurrentTime
@@ -113,6 +114,16 @@ namespace tgvoip{
 		std::string countryCode;
 	};
 
+	// API compatibility
+	struct IPv4Address{
+		IPv4Address(std::string addr) : addr(addr){};
+		std::string addr;
+	};
+	struct IPv6Address{
+		IPv6Address(std::string addr) : addr(addr){};
+		std::string addr;
+	};
+
 	class Endpoint{
 		friend class VoIPController;
 		friend class VoIPGroupController;
@@ -125,16 +136,18 @@ namespace tgvoip{
 			TCP_RELAY
 		};
 
-		Endpoint(int64_t id, uint16_t port, IPv4Address& address, IPv6Address& v6address, Type type, unsigned char* peerTag);
+		Endpoint(int64_t id, uint16_t port, const IPv4Address& address, const IPv6Address& v6address, Type type, unsigned char* peerTag);
+		Endpoint(int64_t id, uint16_t port, const NetworkAddress address, const NetworkAddress v6address, Type type, unsigned char* peerTag);
 		Endpoint();
 		~Endpoint();
 		const NetworkAddress& GetAddress() const;
 		NetworkAddress& GetAddress();
 		bool IsIPv6Only() const;
+		int64_t CleanID() const;
 		int64_t id;
 		uint16_t port;
-		IPv4Address address;
-		IPv6Address v6address;
+		NetworkAddress address;
+		NetworkAddress v6address;
 		Type type;
 		unsigned char peerTag[16];
 
@@ -142,9 +155,13 @@ namespace tgvoip{
 		double lastPingTime;
 		uint32_t lastPingSeq;
 		HistoricBuffer<double, 6> rtts;
+		HistoricBuffer<double, 4> selfRtts;
+		std::map<int64_t, double> udpPingTimes;
 		double averageRTT;
-		NetworkSocket* socket;
+		std::shared_ptr<NetworkSocket> socket;
 		int udpPongCount;
+		int totalUdpPings=0;
+		int totalUdpPingReplies=0;
 	};
 
 	class AudioDevice{
@@ -178,8 +195,14 @@ namespace tgvoip{
 		std::string deviceID;
 	};
 
+	class PacketSender;
+	namespace video{
+		class VideoPacketSender;
+	}
+
 	class VoIPController{
 		friend class VoIPGroupController;
+		friend class PacketSender;
 	public:
 		TGVOIP_DISALLOW_COPY_AND_ASSIGN(VoIPController);
 		struct Config{
@@ -427,17 +450,6 @@ namespace tgvoip{
 		void SetAudioOutputDuckingEnabled(bool enabled);
 #endif
 
-	private:
-		struct Stream;
-		struct UnacknowledgedExtraData;
-
-	protected:
-		struct RecentOutgoingPacket{
-			uint32_t seq;
-			uint16_t id; // for group calls only
-			double sendTime;
-			double ackTime;
-		};
 		struct PendingOutgoingPacket{
 			PendingOutgoingPacket(uint32_t seq, unsigned char type, size_t len, Buffer&& data, int64_t endpoint){
 				this->seq=seq;
@@ -470,52 +482,7 @@ namespace tgvoip{
 			Buffer data;
 			int64_t endpoint;
 		};
-		struct QueuedPacket{
-#if defined(_MSC_VER) && _MSC_VER <= 1800 // VS2013 doesn't support auto-generating move constructors
-			//TGVOIP_DISALLOW_COPY_AND_ASSIGN(QueuedPacket);
-			QueuedPacket(QueuedPacket&& other){
-				data=std::move(other.data);
-				type=other.type;
-				seqs=other.seqs;
-				firstSentTime=other.firstSentTime;
-				lastSentTime=other.lastSentTime;
-				retryInterval=other.retryInterval;
-				timeout=other.timeout;
-			}
-			QueuedPacket(){
 
-			}
-#endif
-			Buffer data;
-			unsigned char type;
-			HistoricBuffer<uint32_t, 16> seqs;
-			double firstSentTime;
-			double lastSentTime;
-			double retryInterval;
-			double timeout;
-		};
-		virtual void ProcessIncomingPacket(NetworkPacket& packet, Endpoint& srcEndpoint);
-		virtual void ProcessExtraData(Buffer& data);
-		virtual void WritePacketHeader(uint32_t seq, BufferOutputStream* s, unsigned char type, uint32_t length);
-		virtual void SendPacket(unsigned char* data, size_t len, Endpoint& ep, PendingOutgoingPacket& srcPacket);
-		virtual void SendInit();
-		virtual void SendUdpPing(Endpoint& endpoint);
-		virtual void SendRelayPings();
-		virtual void OnAudioOutputReady();
-		virtual void SendExtra(Buffer& data, unsigned char type);
-		void SendStreamFlags(Stream& stream);
-		void SendStreamCSD(Stream& stream);
-		void InitializeTimers();
-		void ResetEndpointPingStats();
-		void SendVideoFrame(const Buffer& frame, uint32_t flags);
-		void ProcessIncomingVideoFrame(Buffer frame, uint32_t pts, bool keyframe);
-		std::shared_ptr<Stream> GetStreamByType(int type, bool outgoing);
-		Endpoint* GetEndpointForPacket(const PendingOutgoingPacket& pkt);
-		bool SendOrEnqueuePacket(PendingOutgoingPacket pkt, bool enqueue=true);
-		static std::string NetworkTypeToString(int type);
-		CellularCarrierInfo GetCarrierInfo();
-
-	private:
 		struct Stream{
 			int32_t userID;
 			unsigned char id;
@@ -530,26 +497,75 @@ namespace tgvoip{
 			std::shared_ptr<CallbackWrapper> callbackWrapper;
 			std::vector<Buffer> codecSpecificData;
 			bool csdIsValid=false;
+			bool paused=false;
+			int resolution;
 			unsigned int width=0;
 			unsigned int height=0;
 			uint16_t rotation=0;
 		};
+
+		struct ProtocolInfo{
+			uint32_t version;
+			uint32_t maxVideoResolution;
+			std::vector<uint32_t> videoDecoders;
+			bool videoCaptureSupported;
+			bool videoDisplaySupported;
+			bool callUpgradeSupported;
+		};
+
+	private:
+		struct UnacknowledgedExtraData;
+
+	protected:
+		struct RecentOutgoingPacket{
+			uint32_t seq;
+			uint16_t id; // for group calls only
+			double sendTime;
+			double ackTime;
+			uint8_t type;
+			uint32_t size;
+			PacketSender* sender;
+			bool lost;
+		};
+		struct QueuedPacket{
+			Buffer data;
+			unsigned char type;
+			HistoricBuffer<uint32_t, 16> seqs;
+			double firstSentTime;
+			double lastSentTime;
+			double retryInterval;
+			double timeout;
+		};
+		virtual void ProcessIncomingPacket(NetworkPacket& packet, Endpoint& srcEndpoint);
+		virtual void ProcessExtraData(Buffer& data);
+		virtual void WritePacketHeader(uint32_t seq, BufferOutputStream* s, unsigned char type, uint32_t length, PacketSender* source);
+		virtual void SendPacket(unsigned char* data, size_t len, Endpoint& ep, PendingOutgoingPacket& srcPacket);
+		virtual void SendInit();
+		virtual void SendUdpPing(Endpoint& endpoint);
+		virtual void SendRelayPings();
+		virtual void OnAudioOutputReady();
+		virtual void SendExtra(Buffer& data, unsigned char type);
+		void SendStreamFlags(Stream& stream);
+		void InitializeTimers();
+		void ResetEndpointPingStats();
+		void SendVideoFrame(const Buffer& frame, uint32_t flags, uint32_t rotation);
+		void ProcessIncomingVideoFrame(Buffer frame, uint32_t pts, bool keyframe, uint16_t rotation);
+		std::shared_ptr<Stream> GetStreamByType(int type, bool outgoing);
+		std::shared_ptr<Stream> GetStreamByID(unsigned char id, bool outgoing);
+		Endpoint* GetEndpointForPacket(const PendingOutgoingPacket& pkt);
+		bool SendOrEnqueuePacket(PendingOutgoingPacket pkt, bool enqueue=true, PacketSender* source=NULL);
+		static std::string NetworkTypeToString(int type);
+		CellularCarrierInfo GetCarrierInfo();
+
+	private:
 		struct UnacknowledgedExtraData{
-#if defined(_MSC_VER) && _MSC_VER <= 1800 // VS2013 doesn't support auto-generating move constructors
-			UnacknowledgedExtraData(UnacknowledgedExtraData&& other){
-				type=other.type;
-				data=std::move(other.data);
-				firstContainingSeq=other.firstContainingSeq;
-			}
-			UnacknowledgedExtraData(unsigned char _type, Buffer&& _data, uint32_t _firstContainingSeq){
-				type=_type;
-				data=_data;
-				firstContainingSeq=_firstContainingSeq;
-			}
-#endif
 			unsigned char type;
 			Buffer data;
 			uint32_t firstContainingSeq;
+		};
+		struct RecentIncomingPacket{
+			uint32_t seq;
+			double recvTime;
 		};
 		enum{
 			UDP_UNKNOWN=0,
@@ -564,10 +580,10 @@ namespace tgvoip{
 			double timestamp;
 			int32_t length;
 		};
-		struct SentVideoFrame{
-			uint32_t num;
-			uint32_t fragmentCount;
-			std::vector<uint32_t> unacknowledgedPackets;
+		struct RawPendingOutgoingPacket{
+			TGVOIP_MOVE_ONLY(RawPendingOutgoingPacket);
+			NetworkPacket packet;
+			std::shared_ptr<NetworkSocket> socket;
 		};
 
 		void RunRecvThread();
@@ -580,13 +596,12 @@ namespace tgvoip{
 		void UpdateDataSavingState();
 		void KDF(unsigned char* msgKey, size_t x, unsigned char* aesKey, unsigned char* aesIv);
 		void KDF2(unsigned char* msgKey, size_t x, unsigned char* aesKey, unsigned char* aesIv);
-		static void AudioInputCallback(unsigned char* data, size_t length, unsigned char* secondaryData, size_t secondaryLength, void* param);
 		void SendPublicEndpointsRequest();
 		void SendPublicEndpointsRequest(const Endpoint& relay);
 		Endpoint& GetEndpointByType(int type);
 		void SendPacketReliably(unsigned char type, unsigned char* data, size_t len, double retryInterval, double timeout);
 		uint32_t GenerateOutSeq();
-		void ActuallySendPacket(NetworkPacket& pkt, Endpoint& ep);
+		void ActuallySendPacket(NetworkPacket pkt, Endpoint& ep);
 		void InitializeAudio();
 		void StartAudio();
 		void ProcessAcknowledgedOutgoingExtra(UnacknowledgedExtraData& extra);
@@ -600,24 +615,27 @@ namespace tgvoip{
 		void UpdateSignalBars();
 		void UpdateQueuedPackets();
 		void SendNopPacket();
-		void TickJitterBufferAngCongestionControl();
+		void TickJitterBufferAndCongestionControl();
 		void ResetUdpAvailability();
 		std::string GetPacketTypeString(unsigned char type);
 		void SetupOutgoingVideoStream();
 		bool WasOutgoingPacketAcknowledged(uint32_t seq);
+		RecentOutgoingPacket* GetRecentOutgoingPacket(uint32_t seq);
+		void NetworkPacketReceived(std::shared_ptr<NetworkPacket> packet);
+		void TrySendQueuedPackets();
 
 		int state;
 		std::map<int64_t, Endpoint> endpoints;
 		int64_t currentEndpoint=0;
 		int64_t preferredRelay=0;
 		int64_t peerPreferredRelay=0;
-		bool runReceiver;
+		std::atomic<bool> runReceiver;
 		std::atomic<uint32_t> seq;
 		uint32_t lastRemoteSeq;
 		uint32_t lastRemoteAckSeq;
 		uint32_t lastSentSeq;
 		std::vector<RecentOutgoingPacket> recentOutgoingPackets;
-		double recvPacketTimes[32];
+		std::vector<uint32_t> recentIncomingPackets;
 		HistoricBuffer<uint32_t, 10, double> sendLossCountHistory;
 		uint32_t audioTimestampIn;
 		uint32_t audioTimestampOut;
@@ -627,10 +645,7 @@ namespace tgvoip{
 		OpusEncoder* encoder;
 		std::vector<PendingOutgoingPacket> sendQueue;
 		EchoCanceller* echoCanceller;
-		Mutex sendBufferMutex;
-		Mutex endpointsMutex;
-		Mutex socketSelectMutex;
-		bool stopping;
+		std::atomic<bool> stopping;
 		bool audioOutStarted;
 		Thread* recvThread;
 		Thread* sendThread;
@@ -658,8 +673,6 @@ namespace tgvoip{
 		std::string activeNetItfName;
 		double publicEndpointsReqTime;
 		std::vector<QueuedPacket> queuedPackets;
-		Mutex audioIOMutex;
-		Mutex queuedPacketsMutex;
 		double connectionInitTime;
 		double lastRecvPacketTime;
 		Config config;
@@ -691,7 +704,7 @@ namespace tgvoip{
 		uint16_t proxyPort;
 		std::string proxyUsername;
 		std::string proxyPassword;
-		IPv4Address* resolvedProxyAddress;
+		NetworkAddress resolvedProxyAddress=NetworkAddress::Empty();
 
 		uint32_t peerCapabilities;
 		Callbacks callbacks;
@@ -709,14 +722,13 @@ namespace tgvoip{
 		std::unordered_map<uint8_t, uint64_t> lastReceivedExtrasByType;
 		bool useIPv6;
 		bool peerIPv6Available;
-		IPv6Address myIPv6;
+		NetworkAddress myIPv6=NetworkAddress::Empty();
 		bool shittyInternetMode;
 		int extraEcLevel=0;
 		std::vector<Buffer> ecAudioPackets;
 		bool didAddIPv6Relays;
 		bool didSendIPv6Endpoint;
 		int publicEndpointsReqCount=0;
-		MessageThread messageThread;
 		bool wasEstablished=false;
 		bool receivedFirstStreamPacket=false;
 		std::atomic<unsigned int> unsentStreamPackets;
@@ -724,16 +736,24 @@ namespace tgvoip{
 		bool needReInitUdpProxy=true;
 		bool needRate=false;
 		std::vector<DebugLoggedPacket> debugLoggedPackets;
+		BufferPool<1024, 32> outgoingAudioBufferPool;
+		BlockingQueue<RawPendingOutgoingPacket> rawSendQueue;
 
 		uint32_t initTimeoutID=MessageThread::INVALID_ID;
-		uint32_t noStreamsNopID=MessageThread::INVALID_ID;
 		uint32_t udpPingTimeoutID=MessageThread::INVALID_ID;
 		
 		effects::Volume outputVolume;
 		effects::Volume inputVolume;
 
 		std::vector<uint32_t> peerVideoDecoders;
-        int peerMaxVideoResolution=0;
+
+		MessageThread messageThread;
+
+		// Locked whenever the endpoints vector is modified (but not endpoints themselves) and whenever iterated outside of messageThread.
+		// After the call is started, only messageThread is allowed to modify the endpoints vector.
+		Mutex endpointsMutex;
+		// Locked while audio i/o is being initialized and deinitialized so as to allow it to fully initialize before deinitialization begins.
+		Mutex audioIOMutex;
 
 #if defined(TGVOIP_USE_CALLBACK_AUDIO_IO)
 		std::function<void(int16_t*, size_t)> audioInputDataCallback;
@@ -743,15 +763,21 @@ namespace tgvoip{
 		bool macAudioDuckingEnabled=true;
 #endif
 		
-		video::VideoSource* videoSource=NULL;
 		video::VideoRenderer* videoRenderer=NULL;
-		double firstVideoFrameTime=0.0;
-		uint32_t videoFrameCount=0;
 		uint32_t lastReceivedVideoFrameNumber=UINT32_MAX;
-		std::vector<SentVideoFrame> sentVideoFrames;
-		Mutex sentVideoFramesMutex;
-		bool videoKeyframeRequested=false;
-		
+
+		video::VideoPacketSender* videoPacketSender=NULL;
+		uint32_t sendLosses=0;
+		uint32_t unacknowledgedIncomingPacketCount=0;
+
+		ProtocolInfo protocolInfo={0};
+
+		/*** debug report problems ***/
+		bool wasReconnecting=false;
+		bool wasExtraEC=false;
+		bool wasEncoderLaggy=false;
+		bool wasNetworkHandover=false;
+
 		/*** persistable state values ***/
 		bool proxySupportsUDP=true;
 		bool proxySupportsTCP=true;
@@ -778,6 +804,7 @@ namespace tgvoip{
 		double rateMaxAcceptableSendLoss;
 		double packetLossToEnableExtraEC;
 		uint32_t maxUnsentStreamPackets;
+		uint32_t unackNopThreshold;
 
 	public:
 #ifdef __APPLE__
@@ -794,7 +821,7 @@ namespace tgvoip{
 	public:
 		VoIPGroupController(int32_t timeDifference);
 		virtual ~VoIPGroupController();
-		void SetGroupCallInfo(unsigned char* encryptionKey, unsigned char* reflectorGroupTag, unsigned char* reflectorSelfTag, unsigned char* reflectorSelfSecret,  unsigned char* reflectorSelfTagHash, int32_t selfUserID, IPv4Address reflectorAddress, IPv6Address reflectorAddressV6, uint16_t reflectorPort);
+		void SetGroupCallInfo(unsigned char* encryptionKey, unsigned char* reflectorGroupTag, unsigned char* reflectorSelfTag, unsigned char* reflectorSelfSecret,  unsigned char* reflectorSelfTagHash, int32_t selfUserID, NetworkAddress reflectorAddress, NetworkAddress reflectorAddressV6, uint16_t reflectorPort);
 		void AddGroupCallParticipant(int32_t userID, unsigned char* memberTagHash, unsigned char* serializedStreams, size_t streamsLength);
 		void RemoveGroupCallParticipant(int32_t userID);
 		float GetParticipantAudioLevel(int32_t userID);
@@ -817,7 +844,7 @@ namespace tgvoip{
 		virtual void SendUdpPing(Endpoint& endpoint);
 		virtual void SendRelayPings();
 		virtual void SendPacket(unsigned char* data, size_t len, Endpoint& ep, PendingOutgoingPacket& srcPacket);
-		virtual void WritePacketHeader(uint32_t seq, BufferOutputStream* s, unsigned char type, uint32_t length);
+		virtual void WritePacketHeader(uint32_t seq, BufferOutputStream* s, unsigned char type, uint32_t length, PacketSender* sender=NULL);
 		virtual void OnAudioOutputReady();
 	private:
 		int32_t GetCurrentUnixtime();

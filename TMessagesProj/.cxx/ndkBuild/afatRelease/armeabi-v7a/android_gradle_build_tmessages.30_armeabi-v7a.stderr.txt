@@ -1,76 +1,1973 @@
-In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./fast-edge.cpp:30:
-In file included from D:/android/sdk/sdk/ndk-bundle/build//../sources/android/support/include\math.h:32:
-D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1302:93: error: no member named 'log2f' in the global namespace
-inline _LIBCPP_INLINE_VISIBILITY float       log2(float __lcpp_x) _NOEXCEPT       {return ::log2f(__lcpp_x);}
-                                                                                          ~~^
-D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1303:93: error: no member named 'log2l' in the global namespace
-inline _LIBCPP_INLINE_VISIBILITY long double log2(long double __lcpp_x) _NOEXCEPT {return ::log2l(__lcpp_x);}
-                                                                                          ~~^
-D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1308:38: error: call to 'log2' is ambiguous
-log2(_A1 __lcpp_x) _NOEXCEPT {return ::log2((double)__lcpp_x);}
-                                     ^~~~~~
-D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1302:46: note: candidate function
-inline _LIBCPP_INLINE_VISIBILITY float       log2(float __lcpp_x) _NOEXCEPT       {return ::log2f(__lcpp_x);}
-                                             ^
-D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1303:46: note: candidate function
-inline _LIBCPP_INLINE_VISIBILITY long double log2(long double __lcpp_x) _NOEXCEPT {return ::log2l(__lcpp_x);}
-                                             ^
-3 errors generated.
-make: *** [D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/build/intermediates/ndkBuild/afatRelease/obj/local/armeabi-v7a/objs/tmessages.30/./fast-edge.o] Error 1
-make: *** Waiting for unfinished jobs....
-In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./secureid_ocr.cpp:9:
-In file included from D:/android/sdk/sdk/ndk-bundle/build//../sources/android/support/include\math.h:32:
-D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1302:93: error: no member named 'log2f' in the global namespace
-inline _LIBCPP_INLINE_VISIBILITY float       log2(float __lcpp_x) _NOEXCEPT       {return ::log2f(__lcpp_x);}
-                                                                                          ~~^
-D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1303:93: error: no member named 'log2l' in the global namespace
-inline _LIBCPP_INLINE_VISIBILITY long double log2(long double __lcpp_x) _NOEXCEPT {return ::log2l(__lcpp_x);}
-                                                                                          ~~^
-D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1308:38: error: call to 'log2' is ambiguous
-log2(_A1 __lcpp_x) _NOEXCEPT {return ::log2((double)__lcpp_x);}
-                                     ^~~~~~
-D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1302:46: note: candidate function
-inline _LIBCPP_INLINE_VISIBILITY float       log2(float __lcpp_x) _NOEXCEPT       {return ::log2f(__lcpp_x);}
-                                             ^
-D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1303:46: note: candidate function
-inline _LIBCPP_INLINE_VISIBILITY long double log2(long double __lcpp_x) _NOEXCEPT {return ::log2l(__lcpp_x);}
-                                             ^
-3 errors generated.
-make: *** [D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/build/intermediates/ndkBuild/afatRelease/obj/local/armeabi-v7a/objs/tmessages.30/./secureid_ocr.o] Error 1
-In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./lottie.cpp:4:
-./jni/rlottie/inc\rlottie.h:276:83: error: reference to type 'const std::string' (aka 'const basic_string<char, char_traits<char>, allocator<char> >') could not bind to an lvalue of type 'const char [1]'
-    loadFromData(std::string jsonData, const std::string &key, const std::string &resourcePath="");
-                                                                                  ^            ~~
-./jni/rlottie/inc\rlottie.h:276:83: note: passing argument to parameter 'resourcePath' here
-D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./lottie.cpp:105:78: error: too few arguments to function call, expected 3, have 2
-    info->animation = rlottie::Animation::loadFromData(jsonString, nameString);
-                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                       ^
-./jni/rlottie/inc\rlottie.h:275:5: note: 'loadFromData' declared here
-    static std::unique_ptr<Animation>
-    ^
-2 errors generated.
-make: *** [D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/build/intermediates/ndkBuild/afatRelease/obj/local/armeabi-v7a/objs/tmessages.30/./lottie.o] Error 1
-In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./gifvideo.cpp:15:
-In file included from ./jni/ffmpeg/include\libavformat/avformat.h:319:
-In file included from ./jni/ffmpeg/include\libavcodec/avcodec.h:31:
-In file included from ./jni/ffmpeg/include\libavutil/samplefmt.h:24:
-In file included from ./jni/ffmpeg/include\libavutil/avutil.h:296:
-In file included from ./jni/ffmpeg/include\libavutil/common.h:36:
-In file included from D:/android/sdk/sdk/ndk-bundle/build//../sources/android/support/include\math.h:32:
-D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1302:93: error: no member named 'log2f' in the global namespace
-inline _LIBCPP_INLINE_VISIBILITY float       log2(float __lcpp_x) _NOEXCEPT       {return ::log2f(__lcpp_x);}
-                                                                                          ~~^
-D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1303:93: error: no member named 'log2l' in the global namespace
-inline _LIBCPP_INLINE_VISIBILITY long double log2(long double __lcpp_x) _NOEXCEPT {return ::log2l(__lcpp_x);}
-                                                                                          ~~^
-D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1308:38: error: call to 'log2' is ambiguous
-log2(_A1 __lcpp_x) _NOEXCEPT {return ::log2((double)__lcpp_x);}
-                                     ^~~~~~
-D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1302:46: note: candidate function
-inline _LIBCPP_INLINE_VISIBILITY float       log2(float __lcpp_x) _NOEXCEPT       {return ::log2f(__lcpp_x);}
-                                             ^
-D:/android/sdk/sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include\math.h:1303:46: note: candidate function
-inline _LIBCPP_INLINE_VISIBILITY long double log2(long double __lcpp_x) _NOEXCEPT {return ::log2l(__lcpp_x);}
-                                             ^
-3 errors generated.
-make: *** [D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/build/intermediates/ndkBuild/afatRelease/obj/local/armeabi-v7a/objs/tmessages.30/./gifvideo.o] Error 1
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./rlottie/src/vector/vraster.cpp:22:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni\tgnet/FileLog.h:12:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni\tgnet/Defines.h:136:16: warning: 'ConnectiosManagerDelegate' has virtual functions but non-virtual destructor [-Wnon-virtual-dtor]
+typedef struct ConnectiosManagerDelegate {
+               ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni\tgnet/Defines.h:152:16: warning: 'HandshakeDelegate' has virtual functions but non-virtual destructor [-Wnon-virtual-dtor]
+typedef struct HandshakeDelegate {
+               ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./MessageThread.cpp:16:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/VoIPController.h:37:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:141:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket* GetWrapped();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:142:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:145:16: warning: 'Open' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Open();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:89:16: note: overridden virtual function is here
+                virtual void Open()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:146:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:147:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:148:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:150:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:151:16: warning: 'IsReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsReadyToSend(){
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:100:16: note: overridden virtual function is here
+                virtual bool IsReadyToSend(){
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:169:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:170:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:171:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket *GetWrapped();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:172:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:173:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:174:26: warning: 'GetConnectedAddress' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkAddress GetConnectedAddress();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:95:26: note: overridden virtual function is here
+                virtual NetworkAddress GetConnectedAddress(){ return NetworkAddress::Empty(); };
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:175:20: warning: 'GetConnectedPort' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual uint16_t GetConnectedPort();
+                                 ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:96:20: note: overridden virtual function is here
+                virtual uint16_t GetConnectedPort(){ return 0; };
+                                 ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:176:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:177:16: warning: 'OnReadyToReceive' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToReceive();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:104:16: note: overridden virtual function is here
+                virtual bool OnReadyToReceive(){ return true; };
+                             ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./PacketReassembler.cpp:5:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/PacketReassembler.h:13:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/video/../Buffers.h:20:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./MessageThread.cpp:15:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/MessageThread.h:8:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/AudioIO.cpp:19:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/AudioOutputAndroid.h:20:15: warning: 'Start' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Start();
+                     ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../MediaStreamItf.h:24:15: note: overridden virtual function is here
+        virtual void Start()=0;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/AudioIO.cpp:19:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/AudioOutputAndroid.h:21:15: warning: 'Stop' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Stop();
+                     ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../MediaStreamItf.h:25:15: note: overridden virtual function is here
+        virtual void Stop()=0;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/AudioIO.cpp:8:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/AudioIO.h:11:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/../../audio/AudioInput.h:13:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../MediaStreamItf.h:14:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/../../threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+3 warnings generated.
+18 warnings generated.
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/VideoRendererAndroid.cpp:87:19: warning: moving a temporary object prevents copy elision [-Wpessimizing-move]
+                Request request=std::move(queue.GetBlocking());
+                                ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/VideoSourceAndroid.cpp:5:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/VideoSourceAndroid.h:8:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../video/VideoSource.h:13:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../Buffers.h:20:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/VideoRendererAndroid.cpp:87:19: note: remove std::move call here
+                Request request=std::move(queue.GetBlocking());
+                                ^~~~~~~~~~                   ~
+1 warning generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/VideoRendererAndroid.cpp:5:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/VideoRendererAndroid.h:8:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../video/VideoRenderer.h:9:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../Buffers.h:20:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+2 warnings generated.
+1 warning generated.
+2 warnings generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./rlottie/src/lottie/lottieparser.cpp:58:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni\tgnet/FileLog.h:12:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni\tgnet/Defines.h:136:16: warning: 'ConnectiosManagerDelegate' has virtual functions but non-virtual destructor [-Wnon-virtual-dtor]
+typedef struct ConnectiosManagerDelegate {
+               ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni\tgnet/Defines.h:152:16: warning: 'HandshakeDelegate' has virtual functions but non-virtual destructor [-Wnon-virtual-dtor]
+typedef struct HandshakeDelegate {
+               ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Connection.cpp:223:93: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (currentProtocolType != ProtocolTypeDD && currentProtocolType != ProtocolTypeTLS && currentPacketLength % 4 != 0 || currentPacketLength > 2 * 1024 * 1024) {
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Connection.cpp:223:93: note: place parentheses around the '&&' expression to silence this warning
+        if (currentProtocolType != ProtocolTypeDD && currentProtocolType != ProtocolTypeTLS && currentPacketLength % 4 != 0 || currentPacketLength > 2 * 1024 * 1024) {
+                                                                                            ^
+            (                                                                                                              )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Connection.cpp:512:223: warning: '&&' within '||' [-Wlogical-op-parentheses]
+            if (currentProtocolType == ProtocolTypeTLS || bytes[0] != 0xef && val != 0x44414548 && val != 0x54534f50 && val != 0x20544547 && val != 0x4954504f && val != 0xeeeeeeee && val != 0xdddddddd && val != 0x02010316 && val2 != 0x00000000) {
+                                                       ~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Connection.cpp:512:223: note: place parentheses around the '&&' expression to silence this warning
+            if (currentProtocolType == ProtocolTypeTLS || bytes[0] != 0xef && val != 0x44414548 && val != 0x54534f50 && val != 0x20544547 && val != 0x4954504f && val != 0xeeeeeeee && val != 0xdddddddd && val != 0x02010316 && val2 != 0x00000000) {
+                                                                                                                                                                                                                              ^
+                                                          (                                                                                                                                                                                        )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Connection.cpp:645:57: warning: '&&' within '||' [-Wlogical-op-parentheses]
+    bool switchToNextPort = reason == 2 && wasConnected && (!hasSomeDataSinceLastConnect || currentDatacenter->isCustomPort(currentAddressFlags)) || forceNextPort;
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Connection.cpp:645:57: note: place parentheses around the '&&' expression to silence this warning
+    bool switchToNextPort = reason == 2 && wasConnected && (!hasSomeDataSinceLastConnect || currentDatacenter->isCustomPort(currentAddressFlags)) || forceNextPort;
+                                                        ^
+                            (                                                                                                                    )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Connection.cpp:695:62: warning: '&&' within '||' [-Wlogical-op-parentheses]
+            if (connectionType == ConnectionTypeGenericMedia && currentDatacenter->isHandshaking(true) || connectionType == ConnectionTypeGeneric && (currentDatacenter->isHandshaking(false) || datacenterId == ConnectionsManager::getInstance(currentDatacenter->instanceNum).currentDatacenterId || datacenterId == ConnectionsManager::getInstance(currentDatacenter->instanceNum).movingToDatacenterId)) {
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Connection.cpp:695:62: note: place parentheses around the '&&' expression to silence this warning
+            if (connectionType == ConnectionTypeGenericMedia && currentDatacenter->isHandshaking(true) || connectionType == ConnectionTypeGeneric && (currentDatacenter->isHandshaking(false) || datacenterId == ConnectionsManager::getInstance(currentDatacenter->instanceNum).currentDatacenterId || datacenterId == ConnectionsManager::getInstance(currentDatacenter->instanceNum).movingToDatacenterId)) {
+                                                             ^
+                (                                                                                     )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Connection.cpp:695:147: warning: '&&' within '||' [-Wlogical-op-parentheses]
+            if (connectionType == ConnectionTypeGenericMedia && currentDatacenter->isHandshaking(true) || connectionType == ConnectionTypeGeneric && (currentDatacenter->isHandshaking(false) || datacenterId == ConnectionsManager::getInstance(currentDatacenter->instanceNum).currentDatacenterId || datacenterId == ConnectionsManager::getInstance(currentDatacenter->instanceNum).movingToDatacenterId)) {
+                                                                                                       ~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Connection.cpp:695:147: note: place parentheses around the '&&' expression to silence this warning
+            if (connectionType == ConnectionTypeGenericMedia && currentDatacenter->isHandshaking(true) || connectionType == ConnectionTypeGeneric && (currentDatacenter->isHandshaking(false) || datacenterId == ConnectionsManager::getInstance(currentDatacenter->instanceNum).currentDatacenterId || datacenterId == ConnectionsManager::getInstance(currentDatacenter->instanceNum).movingToDatacenterId)) {
+                                                                                                                                                  ^
+                                                                                                          (                                                                                                                                                                                                                                                                                                  )
+5 warnings generated.
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:853:68: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (length < 24 + 32 || !connection->allowsCustomPadding() && (length - 24) % 16 != 0 || !datacenter->decryptServerResponse(keyId, data->bytes() + mark + 8, data->bytes() + mark + 24, length - 24, connection)) {
+                             ~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:853:68: note: place parentheses around the '&&' expression to silence this warning
+        if (length < 24 + 32 || !connection->allowsCustomPadding() && (length - 24) % 16 != 0 || !datacenter->decryptServerResponse(keyId, data->bytes() + mark + 8, data->bytes() + mark + 24, length - 24, connection)) {
+                                                                   ^
+                                (                                                            )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:938:40: warning: '&&' within '||' [-Wlogical-op-parentheses]
+            if (connectionType == type && connectionNum == num || request->connectionToken == token) {
+                ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~ ~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:938:40: note: place parentheses around the '&&' expression to silence this warning
+            if (connectionType == type && connectionNum == num || request->connectionToken == token) {
+                                       ^
+                (                                             )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1749:101: warning: expression with side effects will be evaluated despite being used as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+        if (LOGS_ENABLED) DEBUG_D("send request wrapped %p - %s", request->rpcRequest.get(), typeid(*(request->rpcRequest.get())).name());
+                                                                                                    ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1841:24: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (token != 0 && request->requestToken == token || messageId != 0 && request->respondsToMessageId(messageId)) {
+            ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1841:24: note: place parentheses around the '&&' expression to silence this warning
+        if (token != 0 && request->requestToken == token || messageId != 0 && request->respondsToMessageId(messageId)) {
+                       ^
+            (                                           )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1841:76: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (token != 0 && request->requestToken == token || messageId != 0 && request->respondsToMessageId(messageId)) {
+                                                         ~~ ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1841:76: note: place parentheses around the '&&' expression to silence this warning
+        if (token != 0 && request->requestToken == token || messageId != 0 && request->respondsToMessageId(messageId)) {
+                                                                           ^
+                                                            (                                                        )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1854:24: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (token != 0 && request->requestToken == token || messageId != 0 && request->respondsToMessageId(messageId)) {
+            ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1854:24: note: place parentheses around the '&&' expression to silence this warning
+        if (token != 0 && request->requestToken == token || messageId != 0 && request->respondsToMessageId(messageId)) {
+                       ^
+            (                                           )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1854:76: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (token != 0 && request->requestToken == token || messageId != 0 && request->respondsToMessageId(messageId)) {
+                                                         ~~ ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1854:76: note: place parentheses around the '&&' expression to silence this warning
+        if (token != 0 && request->requestToken == token || messageId != 0 && request->respondsToMessageId(messageId)) {
+                                                                           ^
+                                                            (                                                        )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1995:101: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (type == HandshakeTypePerm || type == HandshakeTypeAll || type == HandshakeTypeMediaTemp && request->isMediaRequest() || type == HandshakeTypeTemp && !request->isMediaRequest()) {
+                                                                  ~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1995:101: note: place parentheses around the '&&' expression to silence this warning
+        if (type == HandshakeTypePerm || type == HandshakeTypeAll || type == HandshakeTypeMediaTemp && request->isMediaRequest() || type == HandshakeTypeTemp && !request->isMediaRequest()) {
+                                                                                                    ^
+                                                                     (                                                          )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1995:159: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (type == HandshakeTypePerm || type == HandshakeTypeAll || type == HandshakeTypeMediaTemp && request->isMediaRequest() || type == HandshakeTypeTemp && !request->isMediaRequest()) {
+                                                                                                                                 ~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1995:159: note: place parentheses around the '&&' expression to silence this warning
+        if (type == HandshakeTypePerm || type == HandshakeTypeAll || type == HandshakeTypeMediaTemp && request->isMediaRequest() || type == HandshakeTypeTemp && !request->isMediaRequest()) {
+                                                                                                                                                              ^
+                                                                                                                                    (                                                      )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2562:125: warning: expression with side effects will be evaluated despite being used as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+                            if (LOGS_ENABLED) DEBUG_D("wrap body(%p, %s) to TL_invokeAfterMsg", message->body.get(), typeid(*(message->body.get())).name());
+                                                                                                                            ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2709:17: warning: unused variable 'is_inited' [-Wunused-variable]
+    static bool is_inited = []() {
+                ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2741:43: warning: array subscript is of type 'char' [-Wchar-subscripts]
+            auto value = url_char_to_value[base64.c_str()[i++]];
+                                          ^~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2769:32: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (!(secret[i] >= '0' && secret[i] <= '9' || secret[i] >= 'a' && secret[i] <= 'f' || secret[i] >= 'A' && secret[i] <= 'F')) {
+              ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~ ~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2769:32: note: place parentheses around the '&&' expression to silence this warning
+        if (!(secret[i] >= '0' && secret[i] <= '9' || secret[i] >= 'a' && secret[i] <= 'f' || secret[i] >= 'A' && secret[i] <= 'F')) {
+                               ^
+              (                                   )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2769:72: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (!(secret[i] >= '0' && secret[i] <= '9' || secret[i] >= 'a' && secret[i] <= 'f' || secret[i] >= 'A' && secret[i] <= 'F')) {
+                                                   ~~ ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2769:72: note: place parentheses around the '&&' expression to silence this warning
+        if (!(secret[i] >= '0' && secret[i] <= '9' || secret[i] >= 'a' && secret[i] <= 'f' || secret[i] >= 'A' && secret[i] <= 'F')) {
+                                                                       ^
+                                                      (                                   )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2769:112: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (!(secret[i] >= '0' && secret[i] <= '9' || secret[i] >= 'a' && secret[i] <= 'f' || secret[i] >= 'A' && secret[i] <= 'F')) {
+                                                                                           ~~ ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2769:112: note: place parentheses around the '&&' expression to silence this warning
+        if (!(secret[i] >= '0' && secret[i] <= '9' || secret[i] >= 'a' && secret[i] <= 'f' || secret[i] >= 'A' && secret[i] <= 'F')) {
+                                                                                                               ^
+                                                                                              (                                   )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2803:25: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (!workaround && !updatingDcSettings || workaround && !updatingDcSettingsWorkaround) {
+            ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~ ~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2803:25: note: place parentheses around the '&&' expression to silence this warning
+        if (!workaround && !updatingDcSettings || workaround && !updatingDcSettingsWorkaround) {
+                        ^
+            (                                 )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2803:62: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (!workaround && !updatingDcSettings || workaround && !updatingDcSettingsWorkaround) {
+                                               ~~ ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2803:62: note: place parentheses around the '&&' expression to silence this warning
+        if (!workaround && !updatingDcSettings || workaround && !updatingDcSettingsWorkaround) {
+                                                             ^
+                                                  (                                          )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionSocket.cpp:960:29: warning: '&&' within '||' [-Wlogical-op-parentheses]
+    if (proxyAuthState == 0 && (outgoingByteStream->hasData() || !onConnectedSent) || proxyAuthState == 1 || proxyAuthState == 3 || proxyAuthState == 5 || proxyAuthState == 10) {
+        ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/ConnectionSocket.cpp:960:29: note: place parentheses around the '&&' expression to silence this warning
+    if (proxyAuthState == 0 && (outgoingByteStream->hasData() || !onConnectedSent) || proxyAuthState == 1 || proxyAuthState == 3 || proxyAuthState == 5 || proxyAuthState == 10) {
+                            ^
+        (                                                                         )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:844:64: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (handshake->getType() == HandshakeTypePerm || media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                      ~~ ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:844:64: note: place parentheses around the '&&' expression to silence this warning
+        if (handshake->getType() == HandshakeTypePerm || media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                               ^
+                                                         (                                                      )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:844:124: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (handshake->getType() == HandshakeTypePerm || media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                                                                 ~~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:844:124: note: place parentheses around the '&&' expression to silence this warning
+        if (handshake->getType() == HandshakeTypePerm || media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                                                                           ^
+                                                                                                                    (                                                       )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:902:19: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+            ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:902:19: note: place parentheses around the '&&' expression to silence this warning
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                  ^
+            (                                                      )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:902:79: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                    ~~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:902:79: note: place parentheses around the '&&' expression to silence this warning
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                              ^
+                                                                       (                                                       )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:915:19: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+            ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:915:19: note: place parentheses around the '&&' expression to silence this warning
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                  ^
+            (                                                      )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:915:79: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                    ~~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:915:79: note: place parentheses around the '&&' expression to silence this warning
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                              ^
+                                                                       (                                                       )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:946:19: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+            ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:946:19: note: place parentheses around the '&&' expression to silence this warning
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                  ^
+            (                                                      )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:946:79: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                    ~~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:946:79: note: place parentheses around the '&&' expression to silence this warning
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                              ^
+                                                                       (                                                       )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:958:19: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+            ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:958:19: note: place parentheses around the '&&' expression to silence this warning
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                  ^
+            (                                                      )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:958:79: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                    ~~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:958:79: note: place parentheses around the '&&' expression to silence this warning
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                              ^
+                                                                       (                                                       )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:1029:23: warning: '&&' within '||' [-Wlogical-op-parentheses]
+            if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() == HandshakeTypeTemp) {
+                ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:1029:23: note: place parentheses around the '&&' expression to silence this warning
+            if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() == HandshakeTypeTemp) {
+                      ^
+                (                                                      )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:1029:83: warning: '&&' within '||' [-Wlogical-op-parentheses]
+            if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() == HandshakeTypeTemp) {
+                                                                        ~~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:1029:83: note: place parentheses around the '&&' expression to silence this warning
+            if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() == HandshakeTypeTemp) {
+                                                                                  ^
+                                                                           (                                                  )
+2 warnings generated.
+1 warning generated.
+12 warnings generated.
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Request.cpp:86:19: warning: '&&' within '||' [-Wlogical-op-parentheses]
+    return !media && datacenter->lastInitVersion != currentVersion || media && datacenter->lastInitMediaVersion != currentVersion;
+           ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Request.cpp:86:19: note: place parentheses around the '&&' expression to silence this warning
+    return !media && datacenter->lastInitVersion != currentVersion || media && datacenter->lastInitMediaVersion != currentVersion;
+                  ^
+           (                                                      )
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Request.cpp:86:77: warning: '&&' within '||' [-Wlogical-op-parentheses]
+    return !media && datacenter->lastInitVersion != currentVersion || media && datacenter->lastInitMediaVersion != currentVersion;
+                                                                   ~~ ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/./tgnet/Request.cpp:86:77: note: place parentheses around the '&&' expression to silence this warning
+    return !media && datacenter->lastInitVersion != currentVersion || media && datacenter->lastInitMediaVersion != currentVersion;
+                                                                            ^
+                                                                      (                                                          )
+2 warnings generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./logging.cpp:12:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/VoIPController.h:37:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:141:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket* GetWrapped();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:142:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:145:16: warning: 'Open' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Open();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:89:16: note: overridden virtual function is here
+                virtual void Open()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:146:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:147:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:148:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:150:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:151:16: warning: 'IsReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsReadyToSend(){
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:100:16: note: overridden virtual function is here
+                virtual bool IsReadyToSend(){
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:169:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:170:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:171:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket *GetWrapped();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:172:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:173:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:174:26: warning: 'GetConnectedAddress' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkAddress GetConnectedAddress();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:95:26: note: overridden virtual function is here
+                virtual NetworkAddress GetConnectedAddress(){ return NetworkAddress::Empty(); };
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:175:20: warning: 'GetConnectedPort' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual uint16_t GetConnectedPort();
+                                 ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:96:20: note: overridden virtual function is here
+                virtual uint16_t GetConnectedPort(){ return 0; };
+                                 ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:176:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:177:16: warning: 'OnReadyToReceive' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToReceive();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:104:16: note: overridden virtual function is here
+                virtual bool OnReadyToReceive(){ return true; };
+                             ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./logging.cpp:12:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/VoIPController.h:24:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/video/VideoSource.h:13:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/Buffers.h:20:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+18 warnings generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./VoIPController.cpp:14:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/VoIPController.h:37:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:141:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket* GetWrapped();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:142:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:145:16: warning: 'Open' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Open();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:89:16: note: overridden virtual function is here
+                virtual void Open()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:146:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:147:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:148:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:150:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:151:16: warning: 'IsReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsReadyToSend(){
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:100:16: note: overridden virtual function is here
+                virtual bool IsReadyToSend(){
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:169:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:170:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:171:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket *GetWrapped();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:172:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:173:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:174:26: warning: 'GetConnectedAddress' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkAddress GetConnectedAddress();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:95:26: note: overridden virtual function is here
+                virtual NetworkAddress GetConnectedAddress(){ return NetworkAddress::Empty(); };
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:175:20: warning: 'GetConnectedPort' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual uint16_t GetConnectedPort();
+                                 ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:96:20: note: overridden virtual function is here
+                virtual uint16_t GetConnectedPort(){ return 0; };
+                                 ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:176:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:177:16: warning: 'OnReadyToReceive' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToReceive();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:104:16: note: overridden virtual function is here
+                virtual bool OnReadyToReceive(){ return true; };
+                             ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./Buffers.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/Buffers.h:20:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./VoIPGroupController.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/VoIPController.h:37:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:141:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket* GetWrapped();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:142:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:145:16: warning: 'Open' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Open();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:89:16: note: overridden virtual function is here
+                virtual void Open()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:146:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:147:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:148:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:150:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:151:16: warning: 'IsReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsReadyToSend(){
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:100:16: note: overridden virtual function is here
+                virtual bool IsReadyToSend(){
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:169:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:1170:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:171:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket *GetWrapped();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:172:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:173:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:174:26: warning: 'GetConnectedAddress' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkAddress GetConnectedAddress();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:95:26: note: overridden virtual function is here
+                virtual NetworkAddress GetConnectedAddress(){ return NetworkAddress::Empty(); };
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:175:20: warning: 'GetConnectedPort' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual uint16_t GetConnectedPort();
+                                 ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:96:20: note: overridden virtual function is here
+                virtual uint16_t GetConnectedPort(){ return 0; };
+                                 ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:176:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:177:16: warning: 'OnReadyToReceive' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToReceive();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:104:16: note: overridden virtual function is here
+                virtual bool OnReadyToReceive(){ return true; };
+                             ^
+ warning generated.
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./VoIPGroupController.cpp:262:6: warning: '/*' within block comment [-Wcomment]
+                                        /*int32_t date=* /in.ReadInt32();
+                                        ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./VoIPGroupController.cpp:263:6: warning: '/*' within block comment [-Wcomment]
+                                        /*int64_t queryID=* /in.ReadInt64();
+                                        ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./VoIPGroupController.cpp:298:7: warning: '/*' within block comment [-Wcomment]
+                                                /*int32_t p=* /in.ReadInt32();
+                                                ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./VoIPGroupController.cpp:401:2: warning: '/*' within block comment [-Wcomment]
+        /*uint32_t seq=(uint32_t) * /in.ReadInt32();
+        ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./VoIPGroupController.cpp:411:3: warning: '/*' within block comment [-Wcomment]
+                /*oneMoreInnerLengthWhyDoWeEvenNeedThis=* /in.ReadTlLength();
+                ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./VoIPGroupController.cpp:443:4: warning: '/*' within block comment [-Wcomment]
+                        /*if(!audioOutStarted && audioOutput){
+                        ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./BlockingQueue.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/BlockingQueue.h:12:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./VoIPController.cpp:1421:69: warning: format specifies type 'unsigned long' but the argument has type 'size_t' (aka 'unsigned int') [-Wformat]
+                                LOGV("Writing extra into header: type %u, length %lu", x->type, x->data.Length());
+                                                                                 ~~~            ^~~~~~~~~~~~~~~~
+                                                                                 %zu
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/logging.h:28:76: note: expanded from macro 'LOGV'
+#define LOGV(...) {__android_log_print(ANDROID_LOG_VERBOSE, TAG, _LOG_WRAP(__VA_ARGS__)); tgvoip_log_file_printf('V', __VA_ARGS__);}
+                                                                           ^~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/logging.h:26:24: note: expanded from macro '_LOG_WRAP'
+#define _LOG_WRAP(...) __VA_ARGS__
+                       ^~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./VoIPController.cpp:1502:71: warning: format specifies type 'unsigned long' but the argument has type 'size_t' (aka 'unsigned int') [-Wformat]
+                                                LOGV("Writing extra into header: type %u, length %lu", x->type, x->data.Length());
+                                                                                                 ~~~            ^~~~~~~~~~~~~~~~
+                                                                                                 %zu
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/logging.h:28:76: note: expanded from macro 'LOGV'
+#define LOGV(...) {__android_log_print(ANDROID_LOG_VERBOSE, TAG, _LOG_WRAP(__VA_ARGS__)); tgvoip_log_file_printf('V', __VA_ARGS__);}
+                                                                           ^~~~~~~~~~~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/logging.h:26:24: note: expanded from macro '_LOG_WRAP'
+#define _LOG_WRAP(...) __VA_ARGS__
+                       ^~~~~~~~~~~
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/AudioInput.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/../../audio/AudioInput.h:13:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../MediaStreamItf.h:14:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/../../threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./VoIPGroupController.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/VoIPController.h:24:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/video/VideoSource.h:13:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/Buffers.h:20:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioInputOpenSLES.cpp:11:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioInputOpenSLES.h:13:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/AudioInput.h:13:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/../MediaStreamItf.h:14:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./MediaStreamItf.cpp:8:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/MediaStreamItf.h:14:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/AudioOutput.cpp:19:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/AudioOutputAndroid.h:20:15: warning: 'Start' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Start();
+                     ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../MediaStreamItf.h:24:15: note: overridden virtual function is here
+        virtual void Start()=0;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/AudioOutput.cpp:19:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/AudioOutputAndroid.h:21:15: warning: 'Stop' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Stop();
+                     ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../MediaStreamItf.h:25:15: note: overridden virtual function is here
+        virtual void Stop()=0;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/AudioOutput.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/../../audio/AudioOutput.h:14:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./audio/../MediaStreamItf.h:14:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+3 warnings generated.
+24 warnings generated.
+1 warning generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputOpenSLES.cpp:12:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../VoIPController.h:37:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:141:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket* GetWrapped();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:142:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:145:16: warning: 'Open' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Open();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:89:16: note: overridden virtual function is here
+                virtual void Open()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:146:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:147:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:148:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:150:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:151:16: warning: 'IsReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsReadyToSend(){
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:100:16: note: overridden virtual function is here
+                virtual bool IsReadyToSend(){
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:169:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:170:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:171:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket *GetWrapped();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:172:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:173:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:174:26: warning: 'GetConnectedAddress' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkAddress GetConnectedAddress();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:95:26: note: overridden virtual function is here
+                virtual NetworkAddress GetConnectedAddress(){ return NetworkAddress::Empty(); };
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:175:20: warning: 'GetConnectedPort' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual uint16_t GetConnectedPort();
+                                 ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:96:20: note: overridden virtual function is here
+                virtual uint16_t GetConnectedPort(){ return 0; };
+                                 ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:176:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:177:16: warning: 'OnReadyToReceive' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToReceive();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:104:16: note: overridden virtual function is here
+                virtual bool OnReadyToReceive(){ return true; };
+                             ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./OpusEncoder.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/OpusEncoder.h:11:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/MediaStreamItf.h:14:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputOpenSLES.cpp:10:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputOpenSLES.h:13:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/audio/AudioOutput.h:14:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/MediaStreamItf.h:14:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+18 warnings generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./JitterBuffer.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/VoIPController.h:37:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:141:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket* GetWrapped();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:142:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:145:16: warning: 'Open' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Open();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:89:16: note: overridden virtual function is here
+                virtual void Open()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:146:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:147:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:148:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:150:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:151:16: warning: 'IsReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsReadyToSend(){
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:100:16: note: overridden virtual function is here
+                virtual bool IsReadyToSend(){
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:169:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:170:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:171:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket *GetWrapped();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:172:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:173:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:174:26: warning: 'GetConnectedAddress' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkAddress GetConnectedAddress();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:95:26: note: overridden virtual function is here
+                virtual NetworkAddress GetConnectedAddress(){ return NetworkAddress::Empty(); };
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:175:20: warning: 'GetConnectedPort' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual uint16_t GetConnectedPort();
+                                 ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:96:20: note: overridden virtual function is here
+                virtual uint16_t GetConnectedPort(){ return 0; };
+                                 ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:176:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:177:16: warning: 'OnReadyToReceive' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToReceive();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:104:16: note: overridden virtual function is here
+                virtual bool OnReadyToReceive(){ return true; };
+                             ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./VoIPController.cpp:14:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/VoIPController.h:24:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/video/VideoSource.h:13:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/android/../../Buffers.h:20:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/android/../../threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./OpusDecoder.cpp:19:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/VoIPController.h:37:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:141:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket* GetWrapped();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:142:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:145:16: warning: 'Open' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Open();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:89:16: note: overridden virtual function is here
+                virtual void Open()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:146:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:147:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:148:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:150:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:151:16: warning: 'IsReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsReadyToSend(){
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:100:16: note: overridden virtual function is here
+                virtual bool IsReadyToSend(){
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:169:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:170:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:171:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket *GetWrapped();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:172:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:173:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:174:26: warning: 'GetConnectedAddress' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkAddress GetConnectedAddress();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:95:26: note: overridden virtual function is here
+                virtual NetworkAddress GetConnectedAddress(){ return NetworkAddress::Empty(); };
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:175:20: warning: 'GetConnectedPort' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual uint16_t GetConnectedPort();
+                                 ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:96:20: note: overridden virtual function is here
+                virtual uint16_t GetConnectedPort(){ return 0; };
+                                 ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:176:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:177:16: warning: 'OnReadyToReceive' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToReceive();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:104:16: note: overridden virtual function is here
+                virtual bool OnReadyToReceive(){ return true; };
+                             ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./OpusDecoder.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/OpusDecoder.h:11:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/audio/../MediaStreamItf.h:14:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./JitterBuffer.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/VoIPController.h:24:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/video/VideoSource.h:13:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/Buffers.h:20:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputAndroid.cpp:7:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputAndroid.h:20:15: warning: 'Start' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Start();
+                     ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/../MediaStreamItf.h:24:15: note: overridden virtual function is here
+        virtual void Start()=0;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputAndroid.cpp:7:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputAndroid.h:21:15: warning: 'Stop' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Stop();
+                     ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/../MediaStreamItf.h:25:15: note: overridden virtual function is here
+        virtual void Stop()=0;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputAndroid.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputAndroid.h:11:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/AudioOutput.h:14:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/../MediaStreamItf.h:14:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+18 warnings generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioInputAndroid.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioInputAndroid.h:11:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/AudioInput.h:13:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/../MediaStreamItf.h:14:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+3 warnings generated.
+18 warnings generated.
+1 warning generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./NetworkSocket.cpp:13:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/NetworkSocketPosix.h:10:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:141:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket* GetWrapped();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:142:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:145:16: warning: 'Open' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Open();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:89:16: note: overridden virtual function is here
+                virtual void Open()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:146:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:147:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:148:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:150:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:151:16: warning: 'IsReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsReadyToSend(){
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:100:16: note: overridden virtual function is here
+                virtual bool IsReadyToSend(){
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:169:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:170:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:171:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket *GetWrapped();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:172:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:173:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:174:26: warning: 'GetConnectedAddress' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkAddress GetConnectedAddress();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:95:26: note: overridden virtual function is here
+                virtual NetworkAddress GetConnectedAddress(){ return NetworkAddress::Empty(); };
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:175:20: warning: 'GetConnectedPort' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual uint16_t GetConnectedPort();
+                                 ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:96:20: note: overridden virtual function is here
+                virtual uint16_t GetConnectedPort(){ return 0; };
+                                 ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:176:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:177:16: warning: 'OnReadyToReceive' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToReceive();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/../../NetworkSocket.h:104:16: note: overridden virtual function is here
+                virtual bool OnReadyToReceive(){ return true; };
+                             ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./VoIPServerConfig.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/VoIPServerConfig.h:13:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./CongestionControl.cpp:8:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/VoIPController.h:37:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:141:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket* GetWrapped();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:142:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:145:16: warning: 'Open' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Open();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:89:16: note: overridden virtual function is here
+                virtual void Open()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:146:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:147:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:148:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:150:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:151:16: warning: 'IsReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsReadyToSend(){
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:100:16: note: overridden virtual function is here
+                virtual bool IsReadyToSend(){
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:169:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:170:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:171:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket *GetWrapped();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:172:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:173:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:174:26: warning: 'GetConnectedAddress' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkAddress GetConnectedAddress();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:95:26: note: overridden virtual function is here
+                virtual NetworkAddress GetConnectedAddress(){ return NetworkAddress::Empty(); };
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:175:20: warning: 'GetConnectedPort' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual uint16_t GetConnectedPort();
+                                 ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:96:20: note: overridden virtual function is here
+                virtual uint16_t GetConnectedPort(){ return 0; };
+                                 ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:176:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:177:16: warning: 'OnReadyToReceive' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToReceive();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:104:16: note: overridden virtual function is here
+                virtual bool OnReadyToReceive(){ return true; };
+                             ^
+1 warning generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./CongestionControl.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/CongestionControl.h:12:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./NetworkSocket.cpp:13:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/os/posix/NetworkSocketPosix.h:10:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:14:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/video/../Buffers.h:20:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./EchoCanceller.cpp:12:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/EchoCanceller.h:10:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+18 warnings generated.
+17 warnings generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/NetworkSocketPosix.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/NetworkSocketPosix.h:10:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:141:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket* GetWrapped();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:142:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:145:16: warning: 'Open' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Open();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:89:16: note: overridden virtual function is here
+                virtual void Open()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:146:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:147:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:92:16: 18 warnings generated.
+note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:148:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:150:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:151:16: warning: 'IsReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsReadyToSend(){
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:100:16: note: overridden virtual function is here
+                virtual bool IsReadyToSend(){
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:169:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:170:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:171:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket *GetWrapped();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:172:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:173:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:174:26: warning: 'GetConnectedAddress' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkAddress GetConnectedAddress();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:95:26: note: overridden virtual function is here
+                virtual NetworkAddress GetConnectedAddress(){ return NetworkAddress::Empty(); };
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:175:20: warning: 'GetConnectedPort' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual uint16_t GetConnectedPort();
+                                 ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:96:20: note: overridden virtual function is here
+                virtual uint16_t GetConnectedPort(){ return 0; };
+                                 ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:176:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:177:16: warning: 'OnReadyToReceive' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToReceive();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/../../NetworkSocket.h:104:16: note: overridden virtual function is here
+                virtual bool OnReadyToReceive(){ return true; };
+                             ^
+1 warning generated.
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/NetworkSocketPosix.cpp:174:25: warning: moving a temporary object prevents copy elision [-Wpessimizing-move]
+                pendingOutgoingPacket=std::move(NetworkPacket::Empty());
+                                      ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/NetworkSocketPosix.cpp:174:25: note: remove std::move call here
+                pendingOutgoingPacket=std::move(NetworkPacket::Empty());
+                                      ^~~~~~~~~~                      ~
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/VideoRenderer.cpp:5:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/../os/android/../../video/VideoRenderer.h:9:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/../Buffers.h:20:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/NetworkSocketPosix.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/NetworkSocketPosix.h:10:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip\NetworkSocket.h:14:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/video/../Buffers.h:20:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/VideoSource.cpp:5:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/../os/android/../../video/VideoSource.h:13:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/../os/android/../../Buffers.h:20:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/ScreamCongestionController.cpp:9:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/../VoIPController.h:37:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:141:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket* GetWrapped();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:142:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:145:16: warning: 'Open' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Open();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:89:16: note: overridden virtual function is here
+                virtual void Open()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:146:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:147:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:148:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:150:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:151:16: warning: 'IsReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsReadyToSend(){
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:100:16: note: overridden virtual function is here
+                virtual bool IsReadyToSend(){
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:169:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:170:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:171:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket *GetWrapped();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:172:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:173:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:174:26: warning: 'GetConnectedAddress' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkAddress GetConnectedAddress();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:95:26: note: overridden virtual function is here
+                virtual NetworkAddress GetConnectedAddress(){ return NetworkAddress::Empty(); };
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:175:20: warning: 'GetConnectedPort' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual uint16_t GetConnectedPort();
+                                 ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:96:20: note: overridden virtual function is here
+                virtual uint16_t GetConnectedPort(){ return 0; };
+                                 ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:176:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:177:16: warning: 'OnReadyToReceive' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToReceive();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:104:16: note: overridden virtual function is here
+                virtual bool OnReadyToReceive(){ return true; };
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/ScreamCongestionController.cpp:23:18: warning: unused variable 'BETA_ECN' [-Wunused-const-variable]
+        constexpr float BETA_ECN=0.9f;
+                        ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/ScreamCongestionController.cpp:7:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/video/ScreamCongestionController.h:8:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/Buffers.h:20:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+19 warnings generated.
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/VideoFEC.cpp:30:9: warning: moving a local object in a return statement prevents copy elision [-Wpessimizing-move]
+        return std::move(result);
+               ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/VideoFEC.cpp:30:9: note: remove std::move call here
+        return std::move(result);
+               ^~~~~~~~~~      ~
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/VideoFEC.cpp:71:9: warning: moving a local object in a return statement prevents copy elision [-Wpessimizing-move]
+        return std::move(result);
+               ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/VideoFEC.cpp:71:9: note: remove std::move call here
+        return std::move(result);
+               ^~~~~~~~~~      ~
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/VideoFEC.cpp:5:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/VideoFEC.h:8:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/../Buffers.h:20:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/VideoPacketSender.cpp:6:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/VideoPacketSender.h:8:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/../PacketSender.h:8:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/VoIPController.h:37:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:141:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket* GetWrapped();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:142:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:145:16: warning: 'Open' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Open();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:89:16: note: overridden virtual function is here
+                virtual void Open()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:146:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:147:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:148:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:150:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:151:16: warning: 'IsReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsReadyToSend(){
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:100:16: note: overridden virtual function is here
+                virtual bool IsReadyToSend(){
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:169:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:170:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:171:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket *GetWrapped();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:172:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:173:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:174:26: warning: 'GetConnectedAddress' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkAddress GetConnectedAddress();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:95:26: note: overridden virtual function is here
+                virtual NetworkAddress GetConnectedAddress(){ return NetworkAddress::Empty(); };
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:175:20: warning: 'GetConnectedPort' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual uint16_t GetConnectedPort();
+                                 ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:96:20: note: overridden virtual function is here
+                virtual uint16_t GetConnectedPort(){ return 0; };
+                                 ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:176:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:177:16: warning: 'OnReadyToReceive' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToReceive();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:104:16: note: overridden virtual function is here
+                virtual bool OnReadyToReceive(){ return true; };
+                             ^
+19 warnings generated.
+3 warnings generated.
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/VideoPacketSender.cpp:287:13: warning: unused variable 'seq' [-Wunused-variable]
+                        uint32_t seq=SendPacket(std::move(p));
+                                 ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/VideoPacketSender.cpp:6:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/VideoPacketSender.h:8:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/../PacketSender.h:8:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/VoIPController.h:24:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/video/VideoSource.h:13:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/Buffers.h:20:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/../threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/VideoPacketSender.cpp:6:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./video/VideoPacketSender.h:53:13: warning: private field 'sendVideoPacketID' is not used [-Wunused-private-field]
+                        uint32_t sendVideoPacketID=MessageThread::INVALID_ID;
+                                 ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./client/android/tg_voip_jni.cpp:13:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./client/android/../../VoIPController.h:37:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:141:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket* GetWrapped();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:142:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:145:16: warning: 'Open' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Open();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:89:16: note: overridden virtual function is here
+                virtual void Open()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:146:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:147:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:148:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:150:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:151:16: warning: 'IsReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsReadyToSend(){
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:100:16: note: overridden virtual function is here
+                virtual bool IsReadyToSend(){
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:169:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:170:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:171:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket *GetWrapped();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:172:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:173:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:174:26: warning: 'GetConnectedAddress' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkAddress GetConnectedAddress();
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:95:26: note: overridden virtual function is here
+                virtual NetworkAddress GetConnectedAddress(){ return NetworkAddress::Empty(); };
+                                       ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:175:20: warning: 'GetConnectedPort' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual uint16_t GetConnectedPort();
+                                 ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:96:20: note: overridden virtual function is here
+                virtual uint16_t GetConnectedPort(){ return 0; };
+                                 ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:176:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:177:16: warning: 'OnReadyToReceive' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToReceive();
+                             ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/NetworkSocket.h:104:16: note: overridden virtual function is here
+                virtual bool OnReadyToReceive(){ return true; };
+                             ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./client/android/tg_voip_jni.cpp:17:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./client/android/../../os/android/AudioOutputAndroid.h:20:15: warning: 'Start' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Start();
+                     ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/MediaStreamItf.h:24:15: note: overridden virtual function is here
+        virtual void Start()=0;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./client/android/tg_voip_jni.cpp:17:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./client/android/../../os/android/AudioOutputAndroid.h:21:15: warning: 'Stop' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Stop();
+                     ^
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/MediaStreamItf.h:25:15: note: overridden virtual function is here
+        virtual void Stop()=0;
+                     ^
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./client/android/tg_voip_jni.cpp:12:
+In file included from D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./client/android/../../VoIPServerConfig.h:13:
+D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/jni/libtgvoip/./client/android/../../os/android/../../threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+20 warnings generated.
+20 warnings generated.
+20 warnings generated.
