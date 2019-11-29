@@ -1,33 +1,21 @@
 package org.telegram;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.SystemClock;
-import android.text.LoginFilter;
 import android.text.TextUtils;
 import android.util.Log;
-import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.BuildVars;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.LocaleController;
 import org.telegram.messenger.MessageObject;
 import org.telegram.messenger.MessagesController;
 import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
 import org.telegram.messenger.SharedConfig;
 import org.telegram.messenger.UserConfig;
 import org.telegram.messenger.Utilities;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.RequestTimeDelegate;
-import org.telegram.ui.ActionBar.BaseFragment;
-import org.telegram.ui.ProxyListActivity;
-import org.telegram.ui.ProxySettingsActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -202,51 +190,53 @@ public class AutoProxy implements NotificationCenter.NotificationCenterDelegate 
                 }
             }
         } else if (id == NotificationCenter.didUpdateConnectionState) {
-            int state = ConnectionsManager.getInstance(account).getConnectionState();
-            updateCurrentConnectionState(account);
-            Log.d("tdroid", "didUpdatedConnectionState status is" + state);
-//            if (currentConnectionState != state) {
-//                currentConnectionState = state;
-//                updateCurrentConnectionState(account);
-//            }
+
+            final Handler handler = new Handler();
+            handler.postDelayed(() -> {
+                int state = ConnectionsManager.getInstance(account).getConnectionState();
+                if(state!=ConnectionsManager.ConnectionStateConnected) {
+                    updateCurrentConnectionState();
+                }
+
+            }, 3000);
         }
     }
 
     private long delayTimeInConnectionLost = 2000;
 
-    private void updateCurrentConnectionState(int account) {
+    private void updateCurrentConnectionState() {
+        checkProxyList();
 
-
-        currentConnectionState = ConnectionsManager.getInstance(currentAccount).getConnectionState();
-        if (currentConnectionState == ConnectionsManager.ConnectionStateWaitingForNetwork) {
-
-            delayTimeInConnectionLost = 2000;
-        } else if (currentConnectionState == ConnectionsManager.ConnectionStateUpdating) {
-            delayTimeInConnectionLost = 2000 ;
-
-        } else if (currentConnectionState == ConnectionsManager.ConnectionStateConnectingToProxy) {
-
-            final Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-
-                    if (currentConnectionState == ConnectionsManager.ConnectionStateConnectingToProxy) {
-                        checkProxyList();
-                        handler.postDelayed(this,delayTimeInConnectionLost);
-                        if(delayTimeInConnectionLost < 60*1000*2)
-                        delayTimeInConnectionLost = delayTimeInConnectionLost +1000;
-                        Log.d("tdroid", "ConnectionStateConnectingToProxy" + " checkProxyList ");
-                    }
-                }
-            }, 100);
-
-        } else if (currentConnectionState == ConnectionsManager.ConnectionStateConnecting) {
-
-            delayTimeInConnectionLost = 2000;
-        }else if (currentConnectionState == ConnectionsManager.ConnectionStateConnected) {
-            delayTimeInConnectionLost = 2000;
-        }
+//        currentConnectionState = ConnectionsManager.getInstance(currentAccount).getConnectionState();
+//        if (currentConnectionState == ConnectionsManager.ConnectionStateWaitingForNetwork) {
+//
+//            delayTimeInConnectionLost = 2000;
+//        } else if (currentConnectionState == ConnectionsManager.ConnectionStateUpdating) {
+//            delayTimeInConnectionLost = 2000 ;
+//
+//        } else if (currentConnectionState == ConnectionsManager.ConnectionStateConnectingToProxy) {
+//
+//            final Handler handler = new Handler();
+//            handler.postDelayed(new Runnable() {
+//                @Override
+//                public void run() {
+//
+//                    if (currentConnectionState == ConnectionsManager.ConnectionStateConnectingToProxy) {
+//                        checkProxyList();
+//                        handler.postDelayed(this,delayTimeInConnectionLost);
+//                        if(delayTimeInConnectionLost < 60*1000*2)
+//                        delayTimeInConnectionLost = delayTimeInConnectionLost +1000;
+//                        Log.d("tdroid", "ConnectionStateConnectingToProxy" + " checkProxyList ");
+//                    }
+//                }
+//            }, 100);
+//
+//        } else if (currentConnectionState == ConnectionsManager.ConnectionStateConnecting) {
+//
+//            delayTimeInConnectionLost = 2000;
+//        }else if (currentConnectionState == ConnectionsManager.ConnectionStateConnected) {
+//            delayTimeInConnectionLost = 2000;
+//        }
 
     }
 
