@@ -13,7 +13,7 @@
       "buildSystem": "NDK_BUILD",
       "compilerSettingsCacheFolder": "D:\\android\\project\\Telegram\\Telegram\\Telegram\\.cxx",
       "cxxFolder": "D:\\android\\project\\Telegram\\Telegram\\Telegram\\TMessagesProj\\.cxx",
-      "ndkFolder": "D:\\android\\sdk\\sdk\\ndk-bundle",
+      "ndkFolder": "D:\\android\\sdk\\sdk\\ndk\\20.1.5948944",
       "ndkVersion": "20.1.5948944",
       "ndkSupportedAbiList": [
         "ARMEABI_V7A",
@@ -32,7 +32,7 @@
     "buildSystemArgumentList": [
       "NDK_APPLICATION_MK:\u003djni/Application.mk",
       "APP_PLATFORM:\u003dandroid-16",
-      "-j8"
+      "--jobs\u003d8"
     ],
     "cFlagList": [],
     "cppFlagsList": [],
@@ -43,7 +43,10 @@
     "gradleBuildOutputFolder": "D:\\android\\project\\Telegram\\Telegram\\Telegram\\TMessagesProj\\.cxx\\cxx\\afatDebug",
     "isDebuggableEnabled": true,
     "validAbiList": [
-      "ARMEABI_V7A"
+      "ARMEABI_V7A",
+      "ARM64_V8A",
+      "X86",
+      "X86_64"
     ],
     "buildTargetSet": []
   },

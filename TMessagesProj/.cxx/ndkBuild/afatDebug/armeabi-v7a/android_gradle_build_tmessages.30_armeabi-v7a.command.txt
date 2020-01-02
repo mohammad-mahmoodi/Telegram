@@ -1,4 +1,4 @@
-Executable : D:\android\sdk\sdk\ndk-bundle\ndk-build.cmd
+Executable : D:\android\sdk\sdk\ndk\20.1.5948944\ndk-build.cmd
 arguments : 
 NDK_PROJECT_PATH=null
 APP_BUILD_SCRIPT=D:\android\project\Telegram\Telegram\Telegram\TMessagesProj\jni\Android.mk
@@ -11,7 +11,7 @@ NDK_OUT=D:/android/project/Telegram/Telegram/Telegram/TMessagesProj/build/interm
 NDK_LIBS_OUT=D:\android\project\Telegram\Telegram\Telegram\TMessagesProj\build\intermediates\ndkBuild\afatDebug\lib
 NDK_APPLICATION_MK:=jni/Application.mk
 APP_PLATFORM:=android-16
--j8
+--jobs=8
 tmessages.30
 jvmArgs : 
 

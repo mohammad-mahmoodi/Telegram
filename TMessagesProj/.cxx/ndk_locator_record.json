@@ -1,5 +1,5 @@
 {
-  "ndkFolder": "D:\\android\\sdk\\sdk\\ndk-bundle",
+  "ndkFolder": "D:\\android\\sdk\\sdk\\ndk\\20.1.5948944",
   "messages": [
     {
       "level": "INFO",
@@ -7,7 +7,7 @@
     },
     {
       "level": "INFO",
-      "message": "ndk.dir in local.properties is D:\\android\\sdk\\sdk\\ndk-bundle"
+      "message": "ndk.dir in local.properties is D:\\android\\sdk\\sdk\\ndk\\20.1.5948944"
     },
     {
       "level": "INFO",
@@ -19,7 +19,7 @@
     },
     {
       "level": "INFO",
-      "message": "Considering D:\\android\\sdk\\sdk\\ndk-bundle by ndk.dir"
+      "message": "Considering D:\\android\\sdk\\sdk\\ndk\\20.1.5948944 by ndk.dir"
     },
     {
       "level": "INFO",
@@ -27,7 +27,11 @@
     },
     {
       "level": "INFO",
-      "message": "Found requested ndk.dir (D:\\android\\sdk\\sdk\\ndk-bundle) which has version 20.1.5948944"
+      "message": "Considering D:\\android\\sdk\\sdk\\ndk\\20.1.5948944 in SDK ndk folder"
+    },
+    {
+      "level": "INFO",
+      "message": "Found requested ndk.dir (D:\\android\\sdk\\sdk\\ndk\\20.1.5948944) which has version 20.1.5948944"
     }
   ]
 }
