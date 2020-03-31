@@ -42,7 +42,7 @@ android {
     buildToolsVersion '29.0.3'
     ndkVersion "20.0.5594570"
 
-    defaultConfig.applicationId = "org.telegram.messenger"
+    defaultConfig.applicationId = "org.telegram.free"
 
     sourceSets.main.jniLibs.srcDirs = ['./jni/']
 
@@ -69,17 +69,16 @@ android {
 
     signingConfigs {
         debug {
-            storeFile file("config/release.keystore")
-            storePassword RELEASE_STORE_PASSWORD
-            keyAlias RELEASE_KEY_ALIAS
-            keyPassword RELEASE_KEY_PASSWORD
+            storeFile file('/debug.jks')
+            storePassword '12345678'
+            keyAlias 'key0'
+            keyPassword '12345678'
         }
-
         release {
-            storeFile file("config/release.keystore")
-            storePassword RELEASE_STORE_PASSWORD
-            keyAlias RELEASE_KEY_ALIAS
-            keyPassword RELEASE_KEY_PASSWORD
+            storeFile file('/debug.jks')
+            storePassword '12345678'
+            keyAlias 'key0'
+            keyPassword '12345678'
         }
     }
 
@@ -290,7 +289,7 @@ android {
     def tgVoipDexFileName = "libtgvoip.dex"
     def tgVoipDexClasses = ["AudioRecordJNI", "AudioTrackJNI", "NativeTgVoipDelegate", "NativeTgVoipInstance", "TgVoipNativeLoader", "Resampler", "VLog"]
     def tgVoipDexClassesPath = "org/telegram/messenger/voip"
-    def dxUtilPath = "${sdkDirectory.path}/build-tools/${buildToolsVersion}/dx"
+    def dxUtilPath = "${sdkDirectory.path}/build-tools/${buildToolsVersion}/dx.bat"
 
     applicationVariants.all { variant ->
         variant.outputs.all { output ->
@@ -414,9 +413,9 @@ private static File findJavaHome() {
 }
 
 private static File findJavac() {
-    File javaHome = findJavaHome()
+    File javaHome = new File('C:/Program Files/Java/jdk1.8.0_92')
     if (javaHome != null) {
-        return new File(javaHome, "bin/javac")
+        return new File(javaHome, "bin/javac.exe")
     } else {
         return null
     }
