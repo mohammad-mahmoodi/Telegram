@@ -28,9 +28,16 @@ public class AutoProxy implements NotificationCenter.NotificationCenterDelegate 
     static int currentAccount = UserConfig.selectedAccount;
     private int currentConnectionState;
 
+    private boolean useAutoProxySetting;
+    private boolean useAutoBestPingProxySetting;
+    private boolean useProxySettings;
+    private SharedPreferences preferences;
+
     public AutoProxy() {
+        NotificationCenter.getInstance(currentAccount).addObserver(this, NotificationCenter.proxySettingsChanged);
         NotificationCenter.getInstance(currentAccount).addObserver(this, NotificationCenter.didUpdateConnectionState);
         NotificationCenter.getInstance(currentAccount).addObserver(this, NotificationCenter.didReceiveNewMessages);
+        preferences = MessagesController.getGlobalMainSettings();
     }
 
     public void addAutoProxy(String urlProxy) {
@@ -182,7 +189,23 @@ public class AutoProxy implements NotificationCenter.NotificationCenterDelegate 
 
     @Override
     public void didReceivedNotification(int id, int account, Object... args) {
+        if (id == NotificationCenter.proxySettingsChanged) {
+
+            useProxySettings = preferences.getBoolean("proxy_enabled", false) && !SharedConfig.proxyList.isEmpty();
+            useAutoProxySetting = preferences.getBoolean("proxy_auto_enabled", true);
+            useAutoBestPingProxySetting = preferences.getBoolean("proxy_auto_best_ping_enabled", true);
+        }
         if (id == NotificationCenter.didReceiveNewMessages) {
+            useProxySettings = preferences.getBoolean("proxy_enabled", false) && !SharedConfig.proxyList.isEmpty();
+            useAutoProxySetting = preferences.getBoolean("proxy_auto_enabled", true);
+            useAutoBestPingProxySetting = preferences.getBoolean("proxy_auto_best_ping_enabled", true);
+
+            if(!useProxySettings) {
+                return;
+            }
+            if(!useAutoProxySetting) {
+                return;
+            }
             Log.d("tdroid", "id is " + id);
             Long dialogId = (Long) args[0];
             ArrayList<MessageObject> messageObjects = (ArrayList<MessageObject>) args[1];
@@ -203,6 +226,20 @@ public class AutoProxy implements NotificationCenter.NotificationCenterDelegate 
                 }
             }
         } else if (id == NotificationCenter.didUpdateConnectionState) {
+            useProxySettings = preferences.getBoolean("proxy_enabled", false) && !SharedConfig.proxyList.isEmpty();
+            useAutoProxySetting = preferences.getBoolean("proxy_auto_enabled", true);
+            useAutoBestPingProxySetting = preferences.getBoolean("proxy_auto_best_ping_enabled", true);
+
+            if(!useProxySettings) {
+                return;
+            }
+            if(!useAutoProxySetting) {
+                return;
+            }
+
+            if(!useAutoBestPingProxySetting) {
+                return;
+            }
 
             final Handler handler = new Handler();
             handler.postDelayed(() -> {
@@ -211,7 +248,7 @@ public class AutoProxy implements NotificationCenter.NotificationCenterDelegate 
                     updateCurrentConnectionState();
                 }
 
-            }, 3000);
+            }, 100);
         }
     }
 

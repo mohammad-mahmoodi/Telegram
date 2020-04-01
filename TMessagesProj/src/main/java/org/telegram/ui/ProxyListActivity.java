@@ -64,6 +64,8 @@ public class ProxyListActivity extends BaseFragment implements NotificationCente
 
     private boolean useProxySettings;
     private boolean useProxyForCalls;
+    private boolean useAutoProxySetting;
+    private boolean useAutoBestPingProxySetting;
 
     private int rowCount;
     private int useProxyRow;
@@ -75,6 +77,8 @@ public class ProxyListActivity extends BaseFragment implements NotificationCente
     private int proxyDetailRow;
     private int callsRow;
     private int callsDetailRow;
+    private int useAutoProxyRow;
+    private int useAutoBestPingProxyRow;
 
     public class TextDetailProxyCell extends FrameLayout {
 
@@ -220,6 +224,8 @@ public class ProxyListActivity extends BaseFragment implements NotificationCente
         final SharedPreferences preferences = MessagesController.getGlobalMainSettings();
         useProxySettings = preferences.getBoolean("proxy_enabled", false) && !SharedConfig.proxyList.isEmpty();
         useProxyForCalls = preferences.getBoolean("proxy_enabled_calls", false);
+        useAutoProxySetting = preferences.getBoolean("proxy_auto_enabled", true);
+        useAutoBestPingProxySetting = preferences.getBoolean("proxy_auto_best_ping_enabled", true);
 
         updateRows(true);
 
@@ -316,6 +322,36 @@ public class ProxyListActivity extends BaseFragment implements NotificationCente
                     }
                 }
 
+            } else if(position == useAutoProxyRow) {
+                useAutoProxySetting = !useAutoProxySetting;
+
+                SharedPreferences preferences = MessagesController.getGlobalMainSettings();
+
+                TextCheckCell textCheckCell = (TextCheckCell) view;
+                textCheckCell.setChecked(useAutoProxySetting);
+
+                SharedPreferences.Editor editor = MessagesController.getGlobalMainSettings().edit();
+                editor.putBoolean("proxy_auto_enabled", useAutoProxySetting);
+                editor.commit();
+                NotificationCenter.getGlobalInstance().removeObserver(ProxyListActivity.this, NotificationCenter.proxySettingsChanged);
+                NotificationCenter.getGlobalInstance().postNotificationName(NotificationCenter.proxySettingsChanged);
+                NotificationCenter.getGlobalInstance().addObserver(ProxyListActivity.this, NotificationCenter.proxySettingsChanged);
+
+            }else if(position == useAutoBestPingProxyRow) {
+                useAutoBestPingProxySetting = !useAutoBestPingProxySetting;
+
+                SharedPreferences preferences = MessagesController.getGlobalMainSettings();
+
+                TextCheckCell textCheckCell = (TextCheckCell) view;
+                textCheckCell.setChecked(useAutoBestPingProxySetting);
+
+                SharedPreferences.Editor editor = MessagesController.getGlobalMainSettings().edit();
+                editor.putBoolean("proxy_auto_best_ping_enabled", useAutoBestPingProxySetting);
+                editor.commit();
+                NotificationCenter.getGlobalInstance().removeObserver(ProxyListActivity.this, NotificationCenter.proxySettingsChanged);
+                NotificationCenter.getGlobalInstance().postNotificationName(NotificationCenter.proxySettingsChanged);
+                NotificationCenter.getGlobalInstance().addObserver(ProxyListActivity.this, NotificationCenter.proxySettingsChanged);
+
             } else if (position == callsRow) {
                 useProxyForCalls = !useProxyForCalls;
                 TextCheckCell textCheckCell = (TextCheckCell) view;
@@ -395,6 +431,8 @@ public class ProxyListActivity extends BaseFragment implements NotificationCente
     private void updateRows(boolean notify) {
         rowCount = 0;
         useProxyRow = rowCount++;
+        useAutoProxyRow = rowCount++;
+        useAutoBestPingProxyRow = rowCount++;
         useProxyDetailRow = rowCount++;
         connectionsHeaderRow = rowCount++;
         if (!SharedConfig.proxyList.isEmpty()) {
@@ -544,7 +582,11 @@ public class ProxyListActivity extends BaseFragment implements NotificationCente
                     TextCheckCell checkCell = (TextCheckCell) holder.itemView;
                     if (position == useProxyRow) {
                         checkCell.setTextAndCheck(LocaleController.getString("UseProxySettings", R.string.UseProxySettings), useProxySettings, false);
-                    } else if (position == callsRow) {
+                    } else if (position == useAutoProxyRow) {
+                        checkCell.setTextAndCheck("Use Auto Proxy", useAutoProxySetting, false);
+                    }else if (position == useAutoBestPingProxyRow) {
+                        checkCell.setTextAndCheck("Auto Connect Best Ping", useAutoBestPingProxySetting, false);
+                    }else if (position == callsRow) {
                         checkCell.setTextAndCheck(LocaleController.getString("UseProxyForCalls", R.string.UseProxyForCalls), useProxyForCalls, false);
                     }
                     break;
@@ -573,7 +615,11 @@ public class ProxyListActivity extends BaseFragment implements NotificationCente
                 TextCheckCell checkCell = (TextCheckCell) holder.itemView;
                 if (position == useProxyRow) {
                     checkCell.setChecked(useProxySettings);
-                } else if (position == callsRow) {
+                } else if (position == useAutoProxyRow) {
+                    checkCell.setChecked(useAutoProxySetting);
+                }else if (position == useAutoBestPingProxyRow) {
+                    checkCell.setChecked(useAutoBestPingProxySetting);
+                }else if (position == callsRow) {
                     checkCell.setChecked(useProxyForCalls);
                 }
             } else {
@@ -589,6 +635,10 @@ public class ProxyListActivity extends BaseFragment implements NotificationCente
                 int position = holder.getAdapterPosition();
                 if (position == useProxyRow) {
                     checkCell.setChecked(useProxySettings);
+                } else if (position == useAutoProxyRow) {
+                    checkCell.setChecked(useAutoProxySetting);
+                }else if (position == useAutoBestPingProxyRow) {
+                    checkCell.setChecked(useAutoBestPingProxySetting);
                 } else if (position == callsRow) {
                     checkCell.setChecked(useProxyForCalls);
                 }
@@ -639,7 +689,7 @@ public class ProxyListActivity extends BaseFragment implements NotificationCente
                 return 0;
             } else if (position == proxyAddRow) {
                 return 1;
-            } else if (position == useProxyRow || position == callsRow) {
+            } else if (position == useProxyRow || position == callsRow || position == useAutoProxyRow|| position == useAutoBestPingProxyRow) {
                 return 3;
             } else if (position == connectionsHeaderRow) {
                 return 2;
