@@ -66,6 +66,7 @@ public class ProxyListActivity extends BaseFragment implements NotificationCente
     private boolean useProxyForCalls;
     private boolean useAutoProxySetting;
     private boolean useAutoBestPingProxySetting;
+    private boolean useSponsorProxySetting;
 
     private int rowCount;
     private int useProxyRow;
@@ -79,6 +80,7 @@ public class ProxyListActivity extends BaseFragment implements NotificationCente
     private int callsDetailRow;
     private int useAutoProxyRow;
     private int useAutoBestPingProxyRow;
+    private int useSponsorProxyRow;
 
     public class TextDetailProxyCell extends FrameLayout {
 
@@ -226,6 +228,7 @@ public class ProxyListActivity extends BaseFragment implements NotificationCente
         useProxyForCalls = preferences.getBoolean("proxy_enabled_calls", false);
         useAutoProxySetting = preferences.getBoolean("proxy_auto_enabled", true);
         useAutoBestPingProxySetting = preferences.getBoolean("proxy_auto_best_ping_enabled", true);
+        useSponsorProxySetting = preferences.getBoolean("proxy_sponsor_enabled", true);
 
         updateRows(true);
 
@@ -352,6 +355,21 @@ public class ProxyListActivity extends BaseFragment implements NotificationCente
                 NotificationCenter.getGlobalInstance().postNotificationName(NotificationCenter.proxySettingsChanged);
                 NotificationCenter.getGlobalInstance().addObserver(ProxyListActivity.this, NotificationCenter.proxySettingsChanged);
 
+            }else if(position == useSponsorProxyRow) {
+                useSponsorProxySetting = !useSponsorProxySetting;
+
+                SharedPreferences preferences = MessagesController.getGlobalMainSettings();
+
+                TextCheckCell textCheckCell = (TextCheckCell) view;
+                textCheckCell.setChecked(useSponsorProxySetting);
+
+                SharedPreferences.Editor editor = MessagesController.getGlobalMainSettings().edit();
+                editor.putBoolean("proxy_sponsor_enabled", useSponsorProxySetting);
+                editor.commit();
+                NotificationCenter.getGlobalInstance().removeObserver(ProxyListActivity.this, NotificationCenter.proxySettingsChanged);
+                NotificationCenter.getGlobalInstance().postNotificationName(NotificationCenter.proxySettingsChanged);
+                NotificationCenter.getGlobalInstance().addObserver(ProxyListActivity.this, NotificationCenter.proxySettingsChanged);
+
             } else if (position == callsRow) {
                 useProxyForCalls = !useProxyForCalls;
                 TextCheckCell textCheckCell = (TextCheckCell) view;
@@ -433,6 +451,7 @@ public class ProxyListActivity extends BaseFragment implements NotificationCente
         useProxyRow = rowCount++;
         useAutoProxyRow = rowCount++;
         useAutoBestPingProxyRow = rowCount++;
+        useSponsorProxyRow = rowCount++;
         useProxyDetailRow = rowCount++;
         connectionsHeaderRow = rowCount++;
         if (!SharedConfig.proxyList.isEmpty()) {
@@ -588,6 +607,8 @@ public class ProxyListActivity extends BaseFragment implements NotificationCente
                         checkCell.setTextAndCheck("Auto Connect Best Ping", useAutoBestPingProxySetting, false);
                     }else if (position == callsRow) {
                         checkCell.setTextAndCheck(LocaleController.getString("UseProxyForCalls", R.string.UseProxyForCalls), useProxyForCalls, false);
+                    }else if (position == useSponsorProxyRow) {
+                        checkCell.setTextAndCheck("Use Sponsor Proxy", useSponsorProxySetting, false);
                     }
                     break;
                 }
@@ -621,6 +642,8 @@ public class ProxyListActivity extends BaseFragment implements NotificationCente
                     checkCell.setChecked(useAutoBestPingProxySetting);
                 }else if (position == callsRow) {
                     checkCell.setChecked(useProxyForCalls);
+                }else if (position == useSponsorProxyRow) {
+                    checkCell.setTextAndCheck("Use Sponsor Proxy", useSponsorProxySetting, false);
                 }
             } else {
                 super.onBindViewHolder(holder, position, payloads);
@@ -641,6 +664,8 @@ public class ProxyListActivity extends BaseFragment implements NotificationCente
                     checkCell.setChecked(useAutoBestPingProxySetting);
                 } else if (position == callsRow) {
                     checkCell.setChecked(useProxyForCalls);
+                }else if (position == useSponsorProxyRow) {
+                    checkCell.setChecked(useSponsorProxySetting);
                 }
             }
         }
@@ -689,7 +714,7 @@ public class ProxyListActivity extends BaseFragment implements NotificationCente
                 return 0;
             } else if (position == proxyAddRow) {
                 return 1;
-            } else if (position == useProxyRow || position == callsRow || position == useAutoProxyRow|| position == useAutoBestPingProxyRow) {
+            } else if (position == useProxyRow || position == callsRow || position == useAutoProxyRow|| position == useAutoBestPingProxyRow|| position == useSponsorProxyRow) {
                 return 3;
             } else if (position == connectionsHeaderRow) {
                 return 2;

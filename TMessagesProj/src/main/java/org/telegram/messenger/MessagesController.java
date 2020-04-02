@@ -270,6 +270,7 @@ public class MessagesController extends BaseController implements NotificationCe
     private SharedPreferences notificationsPreferences;
     private SharedPreferences mainPreferences;
     private SharedPreferences emojiPreferences;
+    private boolean useSponsorProxySetting;
 
     private static class UserActionUpdatesSeq extends TLRPC.Updates {
 
@@ -471,6 +472,7 @@ public class MessagesController extends BaseController implements NotificationCe
             getNotificationCenter().addObserver(messagesController, NotificationCenter.fileDidFailToLoad);
             getNotificationCenter().addObserver(messagesController, NotificationCenter.messageReceivedByServer);
             getNotificationCenter().addObserver(messagesController, NotificationCenter.updateMessageMedia);
+            getNotificationCenter().addObserver(messagesController, NotificationCenter.proxySettingsChanged);
         });
         addSupportUser();
         if (currentAccount == 0) {
@@ -4198,6 +4200,10 @@ public class MessagesController extends BaseController implements NotificationCe
     }
 
     private void checkProxyInfoInternal(boolean reset) {
+        if(!MessagesController.getGlobalMainSettings().getBoolean("proxy_sponsor_enabled", true)) {
+            AndroidUtilities.runOnUIThread(this::removeProxyDialog);
+            return;
+        }
         if (reset && checkingProxyInfo) {
             checkingProxyInfo = false;
         }

@@ -21,8 +21,8 @@ public class BuildVars {
     public static boolean TON_WALLET_STANDALONE = false;
     public static int BUILD_VERSION = 1911;
     public static String BUILD_VERSION_STRING = "6.0.0";
-    public static int APP_ID = 46758;
-    public static String APP_HASH = "2e4c9b98e72ff7d7f241fb83325236f6";
+    public static int APP_ID = 1066682;
+    public static String APP_HASH = "11e86a8fe61974c1f813e258f5ef4fe6";
     public static String APPCENTER_HASH = "a5b5c4f5-51da-dedc-9918-d9766a22ca7c";
     public static String APPCENTER_HASH_DEBUG = "f9726602-67c9-48d2-b5d0-4761f1c1a8f3";
     //

@@ -34,10 +34,14 @@ public class AutoProxy implements NotificationCenter.NotificationCenterDelegate 
     private SharedPreferences preferences;
 
     public AutoProxy() {
-        NotificationCenter.getInstance(currentAccount).addObserver(this, NotificationCenter.proxySettingsChanged);
+        NotificationCenter.getGlobalInstance().addObserver(this, NotificationCenter.proxySettingsChanged);
         NotificationCenter.getInstance(currentAccount).addObserver(this, NotificationCenter.didUpdateConnectionState);
         NotificationCenter.getInstance(currentAccount).addObserver(this, NotificationCenter.didReceiveNewMessages);
         preferences = MessagesController.getGlobalMainSettings();
+        useProxySettings = preferences.getBoolean("proxy_enabled", false) && !SharedConfig.proxyList.isEmpty();
+        useAutoProxySetting = preferences.getBoolean("proxy_auto_enabled", true);
+        useAutoBestPingProxySetting = preferences.getBoolean("proxy_auto_best_ping_enabled", true);
+
     }
 
     public void addAutoProxy(String urlProxy) {
@@ -196,9 +200,6 @@ public class AutoProxy implements NotificationCenter.NotificationCenterDelegate 
             useAutoBestPingProxySetting = preferences.getBoolean("proxy_auto_best_ping_enabled", true);
         }
         if (id == NotificationCenter.didReceiveNewMessages) {
-            useProxySettings = preferences.getBoolean("proxy_enabled", false) && !SharedConfig.proxyList.isEmpty();
-            useAutoProxySetting = preferences.getBoolean("proxy_auto_enabled", true);
-            useAutoBestPingProxySetting = preferences.getBoolean("proxy_auto_best_ping_enabled", true);
 
             if(!useProxySettings) {
                 return;
@@ -226,9 +227,6 @@ public class AutoProxy implements NotificationCenter.NotificationCenterDelegate 
                 }
             }
         } else if (id == NotificationCenter.didUpdateConnectionState) {
-            useProxySettings = preferences.getBoolean("proxy_enabled", false) && !SharedConfig.proxyList.isEmpty();
-            useAutoProxySetting = preferences.getBoolean("proxy_auto_enabled", true);
-            useAutoBestPingProxySetting = preferences.getBoolean("proxy_auto_best_ping_enabled", true);
 
             if(!useProxySettings) {
                 return;
@@ -248,7 +246,7 @@ public class AutoProxy implements NotificationCenter.NotificationCenterDelegate 
                     updateCurrentConnectionState();
                 }
 
-            }, 100);
+            }, 500);
         }
     }
 
